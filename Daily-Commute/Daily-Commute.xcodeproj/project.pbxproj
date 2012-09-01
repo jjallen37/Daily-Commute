@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5630215815F29BC2008BFDC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630215715F29BC2008BFDC0 /* UIKit.framework */; };
+		5630215A15F29BC2008BFDC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630215915F29BC2008BFDC0 /* Foundation.framework */; };
+		5630215C15F29BC2008BFDC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630215B15F29BC2008BFDC0 /* CoreGraphics.framework */; };
+		5630215E15F29BC2008BFDC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630215D15F29BC2008BFDC0 /* CoreData.framework */; };
+		5630216415F29BC2008BFDC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5630216215F29BC2008BFDC0 /* InfoPlist.strings */; };
+		5630216615F29BC2008BFDC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630216515F29BC2008BFDC0 /* main.m */; };
+		5630216A15F29BC2008BFDC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630216915F29BC2008BFDC0 /* AppDelegate.m */; };
+		5630216D15F29BC2008BFDC0 /* Daily_Commute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5630216B15F29BC2008BFDC0 /* Daily_Commute.xcdatamodeld */; };
+		5630217515F29CD8008BFDC0 /* MovingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630217415F29CD8008BFDC0 /* MovingPoint.m */; };
+		5630217815F29CD8008BFDC0 /* Commute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630217715F29CD8008BFDC0 /* Commute.m */; };
+		5630217D15F29D02008BFDC0 /* RootCommuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630217B15F29D02008BFDC0 /* RootCommuteViewController.m */; };
+		5630217E15F29D02008BFDC0 /* RootCommuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630217C15F29D02008BFDC0 /* RootCommuteViewController.xib */; };
+		5630218315F29D26008BFDC0 /* RecordCommuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630218115F29D26008BFDC0 /* RecordCommuteViewController.m */; };
+		5630218415F29D26008BFDC0 /* RecordCommuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630218215F29D26008BFDC0 /* RecordCommuteViewController.xib */; };
+		5630218815F29ED2008BFDC0 /* CommuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630218615F29ED2008BFDC0 /* CommuteViewController.m */; };
+		5630218915F29ED2008BFDC0 /* CommuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630218715F29ED2008BFDC0 /* CommuteViewController.xib */; };
+		5630218D15F29EE5008BFDC0 /* GraphListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630218B15F29EE5008BFDC0 /* GraphListViewController.m */; };
+		5630219215F29EED008BFDC0 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630219015F29EED008BFDC0 /* GraphViewController.m */; };
+		5630219315F29EED008BFDC0 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630219115F29EED008BFDC0 /* GraphViewController.xib */; };
+		5630219715F29EF7008BFDC0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630219515F29EF6008BFDC0 /* SettingsViewController.m */; };
+		5630219815F29EF7008BFDC0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630219615F29EF7008BFDC0 /* SettingsViewController.xib */; };
+		5630219C15F29EFE008BFDC0 /* NewCommuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630219A15F29EFE008BFDC0 /* NewCommuteViewController.m */; };
+		5630219D15F29EFE008BFDC0 /* NewCommuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630219B15F29EFE008BFDC0 /* NewCommuteViewController.xib */; };
+		563021A115F29F08008BFDC0 /* CommuteSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630219F15F29F08008BFDC0 /* CommuteSettingsViewController.m */; };
+		563021A215F29F08008BFDC0 /* CommuteSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563021A015F29F08008BFDC0 /* CommuteSettingsViewController.xib */; };
+		563021A715F29F40008BFDC0 /* CommuteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563021A615F29F40008BFDC0 /* CommuteListViewController.m */; };
+		563021AB15F29F82008BFDC0 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563021AA15F29F82008BFDC0 /* InfoTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5630215315F29BC2008BFDC0 /* Daily-Commute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily-Commute.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5630215715F29BC2008BFDC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5630215915F29BC2008BFDC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5630215B15F29BC2008BFDC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5630215D15F29BC2008BFDC0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5630216115F29BC2008BFDC0 /* Daily-Commute-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Daily-Commute-Info.plist"; sourceTree = "<group>"; };
+		5630216315F29BC2008BFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5630216515F29BC2008BFDC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5630216715F29BC2008BFDC0 /* Daily-Commute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Daily-Commute-Prefix.pch"; sourceTree = "<group>"; };
+		5630216815F29BC2008BFDC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5630216915F29BC2008BFDC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5630216C15F29BC2008BFDC0 /* Daily_Commute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daily_Commute.xcdatamodel; sourceTree = "<group>"; };
+		5630217315F29CD8008BFDC0 /* MovingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingPoint.h; sourceTree = "<group>"; };
+		5630217415F29CD8008BFDC0 /* MovingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingPoint.m; sourceTree = "<group>"; };
+		5630217615F29CD8008BFDC0 /* Commute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commute.h; sourceTree = "<group>"; };
+		5630217715F29CD8008BFDC0 /* Commute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Commute.m; sourceTree = "<group>"; };
+		5630217A15F29D02008BFDC0 /* RootCommuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootCommuteViewController.h; sourceTree = "<group>"; };
+		5630217B15F29D02008BFDC0 /* RootCommuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootCommuteViewController.m; sourceTree = "<group>"; };
+		5630217C15F29D02008BFDC0 /* RootCommuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootCommuteViewController.xib; sourceTree = "<group>"; };
+		5630218015F29D26008BFDC0 /* RecordCommuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordCommuteViewController.h; sourceTree = "<group>"; };
+		5630218115F29D26008BFDC0 /* RecordCommuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordCommuteViewController.m; sourceTree = "<group>"; };
+		5630218215F29D26008BFDC0 /* RecordCommuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordCommuteViewController.xib; sourceTree = "<group>"; };
+		5630218515F29ED2008BFDC0 /* CommuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteViewController.h; sourceTree = "<group>"; };
+		5630218615F29ED2008BFDC0 /* CommuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteViewController.m; sourceTree = "<group>"; };
+		5630218715F29ED2008BFDC0 /* CommuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommuteViewController.xib; sourceTree = "<group>"; };
+		5630218A15F29EE5008BFDC0 /* GraphListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphListViewController.h; sourceTree = "<group>"; };
+		5630218B15F29EE5008BFDC0 /* GraphListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphListViewController.m; sourceTree = "<group>"; };
+		5630218F15F29EED008BFDC0 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		5630219015F29EED008BFDC0 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		5630219115F29EED008BFDC0 /* GraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
+		5630219415F29EF6008BFDC0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		5630219515F29EF6008BFDC0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5630219615F29EF7008BFDC0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		5630219915F29EFE008BFDC0 /* NewCommuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCommuteViewController.h; sourceTree = "<group>"; };
+		5630219A15F29EFE008BFDC0 /* NewCommuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCommuteViewController.m; sourceTree = "<group>"; };
+		5630219B15F29EFE008BFDC0 /* NewCommuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCommuteViewController.xib; sourceTree = "<group>"; };
+		5630219E15F29F08008BFDC0 /* CommuteSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteSettingsViewController.h; sourceTree = "<group>"; };
+		5630219F15F29F08008BFDC0 /* CommuteSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteSettingsViewController.m; sourceTree = "<group>"; };
+		563021A015F29F08008BFDC0 /* CommuteSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommuteSettingsViewController.xib; sourceTree = "<group>"; };
+		563021A515F29F40008BFDC0 /* CommuteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteListViewController.h; sourceTree = "<group>"; };
+		563021A615F29F40008BFDC0 /* CommuteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteListViewController.m; sourceTree = "<group>"; };
+		563021A915F29F82008BFDC0 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		563021AA15F29F82008BFDC0 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5630215015F29BC2008BFDC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630215815F29BC2008BFDC0 /* UIKit.framework in Frameworks */,
+				5630215A15F29BC2008BFDC0 /* Foundation.framework in Frameworks */,
+				5630215C15F29BC2008BFDC0 /* CoreGraphics.framework in Frameworks */,
+				5630215E15F29BC2008BFDC0 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5630214815F29BC2008BFDC0 = {
+			isa = PBXGroup;
+			children = (
+				5630215F15F29BC2008BFDC0 /* Daily-Commute */,
+				5630215615F29BC2008BFDC0 /* Frameworks */,
+				5630215415F29BC2008BFDC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5630215415F29BC2008BFDC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5630215315F29BC2008BFDC0 /* Daily-Commute.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5630215615F29BC2008BFDC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5630215715F29BC2008BFDC0 /* UIKit.framework */,
+				5630215915F29BC2008BFDC0 /* Foundation.framework */,
+				5630215B15F29BC2008BFDC0 /* CoreGraphics.framework */,
+				5630215D15F29BC2008BFDC0 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5630215F15F29BC2008BFDC0 /* Daily-Commute */ = {
+			isa = PBXGroup;
+			children = (
+				5630216815F29BC2008BFDC0 /* AppDelegate.h */,
+				5630216915F29BC2008BFDC0 /* AppDelegate.m */,
+				5630217915F29CE3008BFDC0 /* Core Data */,
+				563021A315F29F11008BFDC0 /* Settings */,
+				5630217F15F29D0E008BFDC0 /* RootCommute */,
+				563021A415F29F21008BFDC0 /* Graphs */,
+				563021A815F29F48008BFDC0 /* Commute List */,
+				5630216015F29BC2008BFDC0 /* Supporting Files */,
+			);
+			path = "Daily-Commute";
+			sourceTree = "<group>";
+		};
+		5630216015F29BC2008BFDC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5630216115F29BC2008BFDC0 /* Daily-Commute-Info.plist */,
+				5630216215F29BC2008BFDC0 /* InfoPlist.strings */,
+				5630216515F29BC2008BFDC0 /* main.m */,
+				5630216715F29BC2008BFDC0 /* Daily-Commute-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5630217915F29CE3008BFDC0 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				5630216B15F29BC2008BFDC0 /* Daily_Commute.xcdatamodeld */,
+				5630217615F29CD8008BFDC0 /* Commute.h */,
+				5630217715F29CD8008BFDC0 /* Commute.m */,
+				5630217315F29CD8008BFDC0 /* MovingPoint.h */,
+				5630217415F29CD8008BFDC0 /* MovingPoint.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		5630217F15F29D0E008BFDC0 /* RootCommute */ = {
+			isa = PBXGroup;
+			children = (
+				5630217A15F29D02008BFDC0 /* RootCommuteViewController.h */,
+				5630217B15F29D02008BFDC0 /* RootCommuteViewController.m */,
+				5630217C15F29D02008BFDC0 /* RootCommuteViewController.xib */,
+				5630218015F29D26008BFDC0 /* RecordCommuteViewController.h */,
+				5630218115F29D26008BFDC0 /* RecordCommuteViewController.m */,
+				5630218215F29D26008BFDC0 /* RecordCommuteViewController.xib */,
+				563021A915F29F82008BFDC0 /* InfoTableViewController.h */,
+				563021AA15F29F82008BFDC0 /* InfoTableViewController.m */,
+			);
+			name = RootCommute;
+			sourceTree = "<group>";
+		};
+		563021A315F29F11008BFDC0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5630219915F29EFE008BFDC0 /* NewCommuteViewController.h */,
+				5630219A15F29EFE008BFDC0 /* NewCommuteViewController.m */,
+				5630219B15F29EFE008BFDC0 /* NewCommuteViewController.xib */,
+				5630219E15F29F08008BFDC0 /* CommuteSettingsViewController.h */,
+				5630219F15F29F08008BFDC0 /* CommuteSettingsViewController.m */,
+				563021A015F29F08008BFDC0 /* CommuteSettingsViewController.xib */,
+				5630219415F29EF6008BFDC0 /* SettingsViewController.h */,
+				5630219515F29EF6008BFDC0 /* SettingsViewController.m */,
+				5630219615F29EF7008BFDC0 /* SettingsViewController.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		563021A415F29F21008BFDC0 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				5630218A15F29EE5008BFDC0 /* GraphListViewController.h */,
+				5630218B15F29EE5008BFDC0 /* GraphListViewController.m */,
+				5630218F15F29EED008BFDC0 /* GraphViewController.h */,
+				5630219015F29EED008BFDC0 /* GraphViewController.m */,
+				5630219115F29EED008BFDC0 /* GraphViewController.xib */,
+			);
+			name = Graphs;
+			sourceTree = "<group>";
+		};
+		563021A815F29F48008BFDC0 /* Commute List */ = {
+			isa = PBXGroup;
+			children = (
+				563021A515F29F40008BFDC0 /* CommuteListViewController.h */,
+				563021A615F29F40008BFDC0 /* CommuteListViewController.m */,
+				5630218515F29ED2008BFDC0 /* CommuteViewController.h */,
+				5630218615F29ED2008BFDC0 /* CommuteViewController.m */,
+				5630218715F29ED2008BFDC0 /* CommuteViewController.xib */,
+			);
+			name = "Commute List";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5630215215F29BC2008BFDC0 /* Daily-Commute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5630217015F29BC2008BFDC0 /* Build configuration list for PBXNativeTarget "Daily-Commute" */;
+			buildPhases = (
+				5630214F15F29BC2008BFDC0 /* Sources */,
+				5630215015F29BC2008BFDC0 /* Frameworks */,
+				5630215115F29BC2008BFDC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily-Commute";
+			productName = "Daily-Commute";
+			productReference = 5630215315F29BC2008BFDC0 /* Daily-Commute.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5630214A15F29BC2008BFDC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "James Allen";
+			};
+			buildConfigurationList = 5630214D15F29BC2008BFDC0 /* Build configuration list for PBXProject "Daily-Commute" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5630214815F29BC2008BFDC0;
+			productRefGroup = 5630215415F29BC2008BFDC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5630215215F29BC2008BFDC0 /* Daily-Commute */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5630215115F29BC2008BFDC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630216415F29BC2008BFDC0 /* InfoPlist.strings in Resources */,
+				5630217E15F29D02008BFDC0 /* RootCommuteViewController.xib in Resources */,
+				5630218415F29D26008BFDC0 /* RecordCommuteViewController.xib in Resources */,
+				5630218915F29ED2008BFDC0 /* CommuteViewController.xib in Resources */,
+				5630219315F29EED008BFDC0 /* GraphViewController.xib in Resources */,
+				5630219815F29EF7008BFDC0 /* SettingsViewController.xib in Resources */,
+				5630219D15F29EFE008BFDC0 /* NewCommuteViewController.xib in Resources */,
+				563021A215F29F08008BFDC0 /* CommuteSettingsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5630214F15F29BC2008BFDC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630216615F29BC2008BFDC0 /* main.m in Sources */,
+				5630216A15F29BC2008BFDC0 /* AppDelegate.m in Sources */,
+				5630216D15F29BC2008BFDC0 /* Daily_Commute.xcdatamodeld in Sources */,
+				5630217515F29CD8008BFDC0 /* MovingPoint.m in Sources */,
+				5630217815F29CD8008BFDC0 /* Commute.m in Sources */,
+				5630217D15F29D02008BFDC0 /* RootCommuteViewController.m in Sources */,
+				5630218315F29D26008BFDC0 /* RecordCommuteViewController.m in Sources */,
+				5630218815F29ED2008BFDC0 /* CommuteViewController.m in Sources */,
+				5630218D15F29EE5008BFDC0 /* GraphListViewController.m in Sources */,
+				5630219215F29EED008BFDC0 /* GraphViewController.m in Sources */,
+				5630219715F29EF7008BFDC0 /* SettingsViewController.m in Sources */,
+				5630219C15F29EFE008BFDC0 /* NewCommuteViewController.m in Sources */,
+				563021A115F29F08008BFDC0 /* CommuteSettingsViewController.m in Sources */,
+				563021A715F29F40008BFDC0 /* CommuteListViewController.m in Sources */,
+				563021AB15F29F82008BFDC0 /* InfoTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5630216215F29BC2008BFDC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5630216315F29BC2008BFDC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5630216E15F29BC2008BFDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5630216F15F29BC2008BFDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5630217115F29BC2008BFDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daily-Commute/Daily-Commute-Prefix.pch";
+				INFOPLIST_FILE = "Daily-Commute/Daily-Commute-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5630217215F29BC2008BFDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Daily-Commute/Daily-Commute-Prefix.pch";
+				INFOPLIST_FILE = "Daily-Commute/Daily-Commute-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5630214D15F29BC2008BFDC0 /* Build configuration list for PBXProject "Daily-Commute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5630216E15F29BC2008BFDC0 /* Debug */,
+				5630216F15F29BC2008BFDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5630217015F29BC2008BFDC0 /* Build configuration list for PBXNativeTarget "Daily-Commute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5630217115F29BC2008BFDC0 /* Debug */,
+				5630217215F29BC2008BFDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5630216B15F29BC2008BFDC0 /* Daily_Commute.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5630216C15F29BC2008BFDC0 /* Daily_Commute.xcdatamodel */,
+			);
+			currentVersion = 5630216C15F29BC2008BFDC0 /* Daily_Commute.xcdatamodel */;
+			path = Daily_Commute.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5630214A15F29BC2008BFDC0 /* Project object */;
+}
