@@ -7,7 +7,7 @@
 //
 
 #import "MovingPoint.h"
-#import "Commute.h"
+#import "Route.h"
 
 
 @implementation MovingPoint
@@ -16,6 +16,6 @@
 @dynamic longitude;
 @dynamic speed;
 @dynamic time;
-@dynamic commute;
+@dynamic route;
 
 @end

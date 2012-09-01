@@ -7,16 +7,13 @@
 //
 
 #import "Commute.h"
-#import "MovingPoint.h"
+#import "Route.h"
 
 
 @implementation Commute
 
-@dynamic startTime;
 @dynamic name;
-@dynamic timeToArrive;
-@dynamic endTime;
-@dynamic notes;
-@dynamic movingPoints;
+@dynamic arrivalTime;
+@dynamic routes;
 
 @end

@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12A269" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Commute" representedClassName="Commute" syncable="YES">
-        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="arrivalTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="timeToArrive" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="movingPoints" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="MovingPoint" inverseName="commute" inverseEntity="MovingPoint" syncable="YES"/>
+        <relationship name="routes" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Route" inverseName="commute" inverseEntity="Route" syncable="YES"/>
     </entity>
     <entity name="MovingPoint" representedClassName="MovingPoint" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Double" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="commute" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Commute" inverseName="movingPoints" inverseEntity="Commute" syncable="YES"/>
+        <relationship name="route" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Route" inverseName="movingPoints" inverseEntity="Route" syncable="YES"/>
+    </entity>
+    <entity name="Route" representedClassName="Route" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="commute" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Commute" inverseName="routes" inverseEntity="Commute" syncable="YES"/>
+        <relationship name="movingPoints" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="MovingPoint" inverseName="route" inverseEntity="MovingPoint" syncable="YES"/>
     </entity>
     <elements>
         <element name="Commute" positionX="0" positionY="0" width="0" height="0"/>
         <element name="MovingPoint" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Route" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

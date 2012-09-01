@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Commute;
+@class Route;
 
 @interface MovingPoint : NSManagedObject
 
@@ -17,6 +17,6 @@
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSNumber * speed;
 @property (nonatomic, retain) NSDate * time;
-@property (nonatomic, retain) Commute *commute;
+@property (nonatomic, retain) Route *route;
 
 @end
