@@ -181,15 +181,15 @@
 		563021A315F29F11008BFDC0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5630219415F29EF6008BFDC0 /* SettingsViewController.h */,
+				5630219515F29EF6008BFDC0 /* SettingsViewController.m */,
+				5630219615F29EF7008BFDC0 /* SettingsViewController.xib */,
 				5630219915F29EFE008BFDC0 /* NewCommuteViewController.h */,
 				5630219A15F29EFE008BFDC0 /* NewCommuteViewController.m */,
 				5630219B15F29EFE008BFDC0 /* NewCommuteViewController.xib */,
 				5630219E15F29F08008BFDC0 /* CommuteSettingsViewController.h */,
 				5630219F15F29F08008BFDC0 /* CommuteSettingsViewController.m */,
 				563021A015F29F08008BFDC0 /* CommuteSettingsViewController.xib */,
-				5630219415F29EF6008BFDC0 /* SettingsViewController.h */,
-				5630219515F29EF6008BFDC0 /* SettingsViewController.m */,
-				5630219615F29EF7008BFDC0 /* SettingsViewController.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
