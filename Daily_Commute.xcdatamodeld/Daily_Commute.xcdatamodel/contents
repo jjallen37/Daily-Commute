@@ -20,8 +20,8 @@
         <relationship name="movingPoints" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="MovingPoint" inverseName="route" inverseEntity="MovingPoint" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Commute" positionX="160" positionY="192" width="128" height="88"/>
-        <element name="MovingPoint" positionX="160" positionY="192" width="128" height="118"/>
-        <element name="Route" positionX="160" positionY="192" width="128" height="118"/>
+        <element name="Commute" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MovingPoint" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Route" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

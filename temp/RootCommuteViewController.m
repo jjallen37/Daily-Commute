@@ -1,26 +1,24 @@
 //
-//  SettingsViewController.m
+//  RootCommuteViewController.m
 //  Daily-Commute
 //
 //  Created by James Allen on 9/1/12.
 //  Copyright (c) 2012 James Allen. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "RootCommuteViewController.h"
 
-@interface SettingsViewController ()
+@interface RootCommuteViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation RootCommuteViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        NSLog(@"asdf");
     }
     return self;
 }
