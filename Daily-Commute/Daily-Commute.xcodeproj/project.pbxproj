@@ -14,7 +14,6 @@
 		563022B315F5367B008BFDC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 563022B115F5367B008BFDC0 /* InfoPlist.strings */; };
 		563022B515F5367B008BFDC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 563022B415F5367B008BFDC0 /* main.m */; };
 		563022B915F5367B008BFDC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 563022B815F5367B008BFDC0 /* AppDelegate.m */; };
-		563022BC15F5367C008BFDC0 /* Daily_Commute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 563022BA15F5367B008BFDC0 /* Daily_Commute.xcdatamodeld */; };
 		5630232615F53697008BFDC0 /* Commute.m in Sources */ = {isa = PBXBuildFile; fileRef = 563022EC15F53697008BFDC0 /* Commute.m */; };
 		5630232715F53697008BFDC0 /* CommuteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563022EE15F53697008BFDC0 /* CommuteListViewController.m */; };
 		5630232815F53697008BFDC0 /* CommuteSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563022F015F53697008BFDC0 /* CommuteSettingsViewController.m */; };
@@ -34,6 +33,16 @@
 		5630233715F53697008BFDC0 /* RootCommuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630230A15F53697008BFDC0 /* RootCommuteViewController.m */; };
 		5630233815F53698008BFDC0 /* RootCommuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630230B15F53697008BFDC0 /* RootCommuteViewController.xib */; };
 		5630233915F53698008BFDC0 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630230D15F53697008BFDC0 /* Route.m */; };
+		5630234615F53AA2008BFDC0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630234515F53AA2008BFDC0 /* SettingsViewController.m */; };
+		5630234915F53B9E008BFDC0 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630234815F53B9E008BFDC0 /* TipsViewController.m */; };
+		5630234D15F53C4C008BFDC0 /* EditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630234B15F53C49008BFDC0 /* EditableCell.m */; };
+		5630234E15F53C4C008BFDC0 /* EditableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630234C15F53C4A008BFDC0 /* EditableCell.xib */; };
+		5630235515F53C5B008BFDC0 /* InfoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630235015F53C5A008BFDC0 /* InfoTableCell.m */; };
+		5630235615F53C5B008BFDC0 /* InfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630235115F53C5B008BFDC0 /* InfoTableCell.xib */; };
+		5630235715F53C5B008BFDC0 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5630235315F53C5B008BFDC0 /* SettingsCell.m */; };
+		5630235815F53C5B008BFDC0 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5630235415F53C5B008BFDC0 /* SettingsCell.xib */; };
+		5630235B15F53CE4008BFDC0 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5630235A15F53CE4008BFDC0 /* Twitter.framework */; };
+		5630235F15F53F1F008BFDC0 /* Signika-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5630235E15F53F1F008BFDC0 /* Signika-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +57,6 @@
 		563022B615F5367B008BFDC0 /* Daily-Commute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Daily-Commute-Prefix.pch"; sourceTree = "<group>"; };
 		563022B715F5367B008BFDC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		563022B815F5367B008BFDC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		563022BB15F5367B008BFDC0 /* Daily_Commute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daily_Commute.xcdatamodel; sourceTree = "<group>"; };
 		563022EB15F53697008BFDC0 /* Commute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Commute.h; path = "Daily-Commute/Commute.h"; sourceTree = "<group>"; };
 		563022EC15F53697008BFDC0 /* Commute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Commute.m; path = "Daily-Commute/Commute.m"; sourceTree = "<group>"; };
 		563022ED15F53697008BFDC0 /* CommuteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommuteListViewController.h; path = "Daily-Commute/CommuteListViewController.h"; sourceTree = "<group>"; };
@@ -80,7 +88,21 @@
 		5630230B15F53697008BFDC0 /* RootCommuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootCommuteViewController.xib; path = "Daily-Commute/RootCommuteViewController.xib"; sourceTree = "<group>"; };
 		5630230C15F53697008BFDC0 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Route.h; path = "Daily-Commute/Route.h"; sourceTree = "<group>"; };
 		5630230D15F53697008BFDC0 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Route.m; path = "Daily-Commute/Route.m"; sourceTree = "<group>"; };
-		5630230E15F53697008BFDC0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = "Daily-Commute/SettingsViewController.h"; sourceTree = "<group>"; };
+		5630234415F53AA2008BFDC0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		5630234515F53AA2008BFDC0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5630234715F53B9E008BFDC0 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TipsViewController.h; path = "Daily-Commute/TipsViewController.h"; sourceTree = "<group>"; };
+		5630234815F53B9E008BFDC0 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TipsViewController.m; path = "Daily-Commute/TipsViewController.m"; sourceTree = "<group>"; };
+		5630234A15F53C48008BFDC0 /* EditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableCell.h; sourceTree = "<group>"; };
+		5630234B15F53C49008BFDC0 /* EditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableCell.m; sourceTree = "<group>"; };
+		5630234C15F53C4A008BFDC0 /* EditableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditableCell.xib; sourceTree = "<group>"; };
+		5630234F15F53C5A008BFDC0 /* InfoTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableCell.h; sourceTree = "<group>"; };
+		5630235015F53C5A008BFDC0 /* InfoTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableCell.m; sourceTree = "<group>"; };
+		5630235115F53C5B008BFDC0 /* InfoTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableCell.xib; sourceTree = "<group>"; };
+		5630235215F53C5B008BFDC0 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		5630235315F53C5B008BFDC0 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		5630235415F53C5B008BFDC0 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		5630235A15F53CE4008BFDC0 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		5630235E15F53F1F008BFDC0 /* Signika-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5630235B15F53CE4008BFDC0 /* Twitter.framework in Frameworks */,
 				563022A715F5367B008BFDC0 /* UIKit.framework in Frameworks */,
 				563022A915F5367B008BFDC0 /* Foundation.framework in Frameworks */,
 				563022AB15F5367B008BFDC0 /* CoreGraphics.framework in Frameworks */,
@@ -101,11 +124,6 @@
 		5630229715F5367B008BFDC0 = {
 			isa = PBXGroup;
 			children = (
-				5630233A15F53707008BFDC0 /* Core Data */,
-				5630233D15F5373B008BFDC0 /* Record Commute */,
-				5630233C15F5372C008BFDC0 /* Commute List */,
-				5630233E15F5374D008BFDC0 /* Settings */,
-				5630233B15F5371F008BFDC0 /* Graphs */,
 				563022AE15F5367B008BFDC0 /* Daily-Commute */,
 				563022A515F5367B008BFDC0 /* Frameworks */,
 				563022A315F5367B008BFDC0 /* Products */,
@@ -123,6 +141,7 @@
 		563022A515F5367B008BFDC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5630235A15F53CE4008BFDC0 /* Twitter.framework */,
 				563022A615F5367B008BFDC0 /* UIKit.framework */,
 				563022A815F5367B008BFDC0 /* Foundation.framework */,
 				563022AA15F5367B008BFDC0 /* CoreGraphics.framework */,
@@ -136,7 +155,12 @@
 			children = (
 				563022B715F5367B008BFDC0 /* AppDelegate.h */,
 				563022B815F5367B008BFDC0 /* AppDelegate.m */,
-				563022BA15F5367B008BFDC0 /* Daily_Commute.xcdatamodeld */,
+				5630233A15F53707008BFDC0 /* Core Data */,
+				5630233D15F5373B008BFDC0 /* Record Commute */,
+				5630233B15F5371F008BFDC0 /* Graphs */,
+				5630233C15F5372C008BFDC0 /* Commute List */,
+				5630233E15F5374D008BFDC0 /* Settings */,
+				5630235915F53C65008BFDC0 /* Custom Cells */,
 				563022AF15F5367B008BFDC0 /* Supporting Files */,
 			);
 			path = "Daily-Commute";
@@ -145,6 +169,7 @@
 		563022AF15F5367B008BFDC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5630235D15F53F1F008BFDC0 /* Fonts */,
 				563022B015F5367B008BFDC0 /* Daily-Commute-Info.plist */,
 				563022B115F5367B008BFDC0 /* InfoPlist.strings */,
 				563022B415F5367B008BFDC0 /* main.m */,
@@ -165,6 +190,7 @@
 				5630230215F53697008BFDC0 /* MovingPoint.m */,
 			);
 			name = "Core Data";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5630233B15F5371F008BFDC0 /* Graphs */ = {
@@ -177,47 +203,79 @@
 				563022FE15F53697008BFDC0 /* GraphViewController.xib */,
 			);
 			name = Graphs;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5630233C15F5372C008BFDC0 /* Commute List */ = {
 			isa = PBXGroup;
 			children = (
+				563022ED15F53697008BFDC0 /* CommuteListViewController.h */,
+				563022EE15F53697008BFDC0 /* CommuteListViewController.m */,
 				563022F215F53697008BFDC0 /* CommuteViewController.h */,
 				563022F315F53697008BFDC0 /* CommuteViewController.m */,
 				563022F415F53697008BFDC0 /* CommuteViewController.xib */,
-				563022ED15F53697008BFDC0 /* CommuteListViewController.h */,
-				563022EE15F53697008BFDC0 /* CommuteListViewController.m */,
 			);
 			name = "Commute List";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5630233D15F5373B008BFDC0 /* Record Commute */ = {
 			isa = PBXGroup;
 			children = (
-				563022FF15F53697008BFDC0 /* InfoTableViewController.h */,
-				5630230015F53697008BFDC0 /* InfoTableViewController.m */,
 				5630230915F53697008BFDC0 /* RootCommuteViewController.h */,
 				5630230A15F53697008BFDC0 /* RootCommuteViewController.m */,
 				5630230B15F53697008BFDC0 /* RootCommuteViewController.xib */,
 				5630230615F53697008BFDC0 /* RecordCommuteViewController.h */,
 				5630230715F53697008BFDC0 /* RecordCommuteViewController.m */,
 				5630230815F53697008BFDC0 /* RecordCommuteViewController.xib */,
+				563022FF15F53697008BFDC0 /* InfoTableViewController.h */,
+				5630230015F53697008BFDC0 /* InfoTableViewController.m */,
 			);
 			name = "Record Commute";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5630233E15F5374D008BFDC0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5630230E15F53697008BFDC0 /* SettingsViewController.h */,
+				5630234415F53AA2008BFDC0 /* SettingsViewController.h */,
+				5630234515F53AA2008BFDC0 /* SettingsViewController.m */,
 				563022EF15F53697008BFDC0 /* CommuteSettingsViewController.h */,
 				563022F015F53697008BFDC0 /* CommuteSettingsViewController.m */,
 				563022F115F53697008BFDC0 /* CommuteSettingsViewController.xib */,
 				5630230315F53697008BFDC0 /* NewCommuteViewController.h */,
 				5630230415F53697008BFDC0 /* NewCommuteViewController.m */,
 				5630230515F53697008BFDC0 /* NewCommuteViewController.xib */,
+				5630234715F53B9E008BFDC0 /* TipsViewController.h */,
+				5630234815F53B9E008BFDC0 /* TipsViewController.m */,
 			);
 			name = Settings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5630235915F53C65008BFDC0 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5630234F15F53C5A008BFDC0 /* InfoTableCell.h */,
+				5630235015F53C5A008BFDC0 /* InfoTableCell.m */,
+				5630235115F53C5B008BFDC0 /* InfoTableCell.xib */,
+				5630235215F53C5B008BFDC0 /* SettingsCell.h */,
+				5630235315F53C5B008BFDC0 /* SettingsCell.m */,
+				5630235415F53C5B008BFDC0 /* SettingsCell.xib */,
+				5630234A15F53C48008BFDC0 /* EditableCell.h */,
+				5630234B15F53C49008BFDC0 /* EditableCell.m */,
+				5630234C15F53C4A008BFDC0 /* EditableCell.xib */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		5630235D15F53F1F008BFDC0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5630235E15F53F1F008BFDC0 /* Signika-Bold.otf */,
+			);
+			name = Fonts;
+			path = "Supporting Files/Fonts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +336,10 @@
 				5630233415F53697008BFDC0 /* NewCommuteViewController.xib in Resources */,
 				5630233615F53697008BFDC0 /* RecordCommuteViewController.xib in Resources */,
 				5630233815F53698008BFDC0 /* RootCommuteViewController.xib in Resources */,
+				5630234E15F53C4C008BFDC0 /* EditableCell.xib in Resources */,
+				5630235615F53C5B008BFDC0 /* InfoTableCell.xib in Resources */,
+				5630235815F53C5B008BFDC0 /* SettingsCell.xib in Resources */,
+				5630235F15F53F1F008BFDC0 /* Signika-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +352,6 @@
 			files = (
 				563022B515F5367B008BFDC0 /* main.m in Sources */,
 				563022B915F5367B008BFDC0 /* AppDelegate.m in Sources */,
-				563022BC15F5367C008BFDC0 /* Daily_Commute.xcdatamodeld in Sources */,
 				5630232615F53697008BFDC0 /* Commute.m in Sources */,
 				5630232715F53697008BFDC0 /* CommuteListViewController.m in Sources */,
 				5630232815F53697008BFDC0 /* CommuteSettingsViewController.m in Sources */,
@@ -304,6 +365,11 @@
 				5630233515F53697008BFDC0 /* RecordCommuteViewController.m in Sources */,
 				5630233715F53697008BFDC0 /* RootCommuteViewController.m in Sources */,
 				5630233915F53698008BFDC0 /* Route.m in Sources */,
+				5630234615F53AA2008BFDC0 /* SettingsViewController.m in Sources */,
+				5630234915F53B9E008BFDC0 /* TipsViewController.m in Sources */,
+				5630234D15F53C4C008BFDC0 /* EditableCell.m in Sources */,
+				5630235515F53C5B008BFDC0 /* InfoTableCell.m in Sources */,
+				5630235715F53C5B008BFDC0 /* SettingsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,20 +477,11 @@
 				563022C115F5367C008BFDC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		563022BA15F5367B008BFDC0 /* Daily_Commute.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				563022BB15F5367B008BFDC0 /* Daily_Commute.xcdatamodel */,
-			);
-			currentVersion = 563022BB15F5367B008BFDC0 /* Daily_Commute.xcdatamodel */;
-			path = Daily_Commute.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		563022F515F53697008BFDC0 /* Daily_Commute.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

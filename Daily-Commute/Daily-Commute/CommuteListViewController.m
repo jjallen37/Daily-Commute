@@ -19,6 +19,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = @"Commutes";
+        
     }
     return self;
 }

@@ -10,7 +10,7 @@
 #import "RootCommuteViewController.h"
 #import "GraphListViewController.h"
 #import "CommuteListViewController.h"
-
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -31,13 +31,18 @@
     GraphListViewController *graphListVC = [[GraphListViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *tab2 = [[UINavigationController alloc] initWithRootViewController:graphListVC];
     
-    //Tab 1 - CommuteListVC
+    //Tab 3 - CommuteListVC
     CommuteListViewController *commuteListVC = [[CommuteListViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *tab3 = [[UINavigationController alloc] initWithRootViewController:commuteListVC];
+
+    
+    //Tab 4 - Settings VC
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *tab4 = [[UINavigationController alloc] initWithRootViewController:settingsVC];
     
     //Initilize the Tab Bar
     tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[tab1, tab2, tab3];
+    tabBarController.viewControllers = @[tab1, tab2, tab3, tab4];
     
     //Connect the core data
     rootCommuteVC.managedObjectContext = self.managedObjectContext;

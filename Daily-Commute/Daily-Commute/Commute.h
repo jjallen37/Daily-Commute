@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+//To be used with NSUSerDefaults to select the active commute.
+#define kCurrentCommuteKey @"CurrentComute"
+
 @class Route;
 
 @interface Commute : NSManagedObject
