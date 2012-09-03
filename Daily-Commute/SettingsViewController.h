@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewCommuteViewController.h"
 
 @class Commute;
-@interface SettingsViewController : UITableViewController{
+@interface SettingsViewController : UITableViewController<NewCommuteModalDelegate>{
     IBOutlet UIButton *cancelButton;
     IBOutlet UIButton *checkButton;
     BOOL isEditing;

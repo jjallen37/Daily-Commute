@@ -110,39 +110,39 @@
 
 -(IBAction)presentNewCommuteView:(id)sender{
     
-//    if (managedObjectContext == nil)
-//    {
-//        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-//    }
-//    
-//    //Find the commute with the name of text label
-//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//    NSEntityDescription *entityDescription = [NSEntityDescription
-//                                              entityForName:@"Commute"
-//                                              inManagedObjectContext:managedObjectContext];
-//    [request setEntity:entityDescription];
-//    
-//    NSError *error;
-//    NSArray *objects = [managedObjectContext executeFetchRequest:request error:&error];
-//    
-//    if(![[NSUserDefaults standardUserDefaults] objectForKey:@"isProUpgradePurchased"] && [objects count] == 1){
-//        UIAlertView *alert = [[UIAlertView alloc]
-//                              initWithTitle: @"Upgrade for more commutes!"
-//                              message: @"Sorry in the free version we only allow one commute. \n Upgrade now to have multiple commutes!"
-//                              delegate: self
-//                              cancelButtonTitle:@"Close"
-//                              otherButtonTitles:nil];
-//        [alert show];
-//        return;
-//    }
-//    
-//    aNewCommute = [NSEntityDescription insertNewObjectForEntityForName:@"Commute" inManagedObjectContext:managedObjectContext];
-//    
-//    NewCommuteModalNavigationController *newCommuteScreen = [[NewCommuteModalNavigationController alloc] init];
-//    newCommuteScreen.delegate = self;
-//    newCommuteScreen.commute = aNewCommute;
-//    
-//    [self.navigationController presentModalViewController:newCommuteScreen animated:YES];
+    if (managedObjectContext == nil)
+    {
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    //Find the commute with the name of text label
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:@"Commute"
+                                              inManagedObjectContext:managedObjectContext];
+    [request setEntity:entityDescription];
+    
+    NSError *error;
+    NSArray *objects = [managedObjectContext executeFetchRequest:request error:&error];
+    
+    if(![[NSUserDefaults standardUserDefaults] objectForKey:@"isProUpgradePurchased"] && [objects count] == 1){
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Upgrade for more commutes!"
+                              message: @"Sorry in the free version we only allow one commute. \n Upgrade now to have multiple commutes!"
+                              delegate: self
+                              cancelButtonTitle:@"Close"
+                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    aNewCommute = [NSEntityDescription insertNewObjectForEntityForName:@"Commute" inManagedObjectContext:managedObjectContext];
+    
+    NewCommuteViewController *newCommuteScreen = [[NewCommuteViewController alloc] init];
+    newCommuteScreen.delegate = self;
+    newCommuteScreen.commute = aNewCommute;
+    
+    [self.navigationController presentModalViewController:newCommuteScreen animated:YES];
 }
 
 #pragma mark - New Commute Delegate
@@ -177,7 +177,6 @@
 {
     if(section==0){
         // Return the number of rows in the section.
-        NSLog(@"commuteArray count - %i",[commuteArray count]);
         NSUInteger count = [commuteArray count];
         if (self.editing) {
             count++;
@@ -269,6 +268,36 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    switch (indexPath.section) {
+        case 0://Commutes
+            if (isEditing) {
+                if (indexPath.row==commuteArray.count) {
+                    [self presentNewCommuteView:nil];
+                }else{
+                    //Edit shit
+                }
+            }
+            break;
+        case 1://Tutorial tips
+            switch (indexPath.row) {
+                case 0://Tutorial
+                    break;
+                case 1://Tips
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+        case 2://Restore pro
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+//    
 //    if(indexPath.section==1 && indexPath.row == 0){
 //        [(AppDelegate *)[[UIApplication sharedApplication] delegate] showTutorial];
 //        return;
@@ -281,7 +310,7 @@
 //        [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 //    }
 //    if ([tableView isEditing] && indexPath.row != [commuteArray count]) {
-//        CommuteSettingsTableViewController *commuteSettingsTVC = [[CommuteSettingsTableViewController alloc] initWithCommute:[commuteArray objectAtIndex:indexPath.row]];
+//        CommuteSettingsViewController *commuteSettingsTVC = [[CommuteSettingsViewController alloc] initWithCommute:[commuteArray objectAtIndex:indexPath.row]];
 //        commuteSettingsTVC.managedObjectContext = self.managedObjectContext;
 //        [self.navigationController pushViewController:commuteSettingsTVC animated:YES];
 //    } else if ([tableView isEditing] && indexPath.row == [commuteArray count]) {

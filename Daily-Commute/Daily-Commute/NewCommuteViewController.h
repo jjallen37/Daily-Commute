@@ -1,13 +1,34 @@
 //
-//  NewCommuteViewController.h
-//  Daily-Commute
+//  NewCommuteModalNavigationController.h
+//  DailyCommute
 //
-//  Created by James Allen on 9/1/12.
-//  Copyright (c) 2012 James Allen. All rights reserved.
+//  Created by James Allen on 3/28/12.
+//  Copyright (c) 2012 Valley Rocket. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Commute.h"
+#import "CommuteSettingsViewController.h"
+#import "CustomNavigationBar.h"
 
-@interface NewCommuteViewController : UIViewController
+@protocol NewCommuteModalDelegate <NSObject>
+
+-(void)acceptCommute;
+-(void)refuteCommute;
+@end
+
+@interface NewCommuteViewController : UIViewController{
+    IBOutlet UITableView *settingsTV;
+    IBOutlet UINavigationItem *navItem;
+}
+
+@property (nonatomic, assign) id<NewCommuteModalDelegate> delegate;
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) Commute *commute;
+@property (strong, nonatomic) CommuteSettingsViewController *settingsTVC;
+
+-(IBAction)acceptCommute:(id)sender;//Saves new Commute
+-(IBAction)refuteCommute:(id)sender;//Cancels new Commute
 
 @end
