@@ -274,7 +274,16 @@
                 if (indexPath.row==commuteArray.count) {
                     [self presentNewCommuteView:nil];
                 }else{
-                    //Edit shit
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    //
+                    Commute *tempCommute = [commuteArray objectAtIndex:indexPath.row];
+                    
+                    [defaults setObject:tempCommute.name forKey:kCurrentCommuteKey];
+                    [[self.tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+                    [defaults synchronize];
+                            
+                    [self.tableView reloadData];
+
                 }
             }
             break;

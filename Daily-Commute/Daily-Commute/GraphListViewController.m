@@ -7,6 +7,7 @@
 //
 
 #import "GraphListViewController.h"
+#import "CommuteTimeScatterPlotViewController.h"
 
 @interface GraphListViewController ()
 
@@ -41,6 +42,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GraphCell"];
+    if (indexPath.row == 1) {
+        cell.textLabel.text = @"Commute History Graph";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    return cell;
+}
+
+-(void) viewCommuteGraph {
+    CommuteTimeScatterPlotViewController *ctGraph = [[CommuteTimeScatterPlotViewController alloc] init];
+    [self presentViewController:ctGraph animated:YES completion:nil];
 }
 
 @end
