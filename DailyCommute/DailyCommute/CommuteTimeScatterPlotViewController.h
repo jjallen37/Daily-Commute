@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GraphViewController.h"
 
-@interface CommuteTimeScatterPlotViewController : UIViewController <CPTPlotDataSource>
-
-@property (nonatomic, strong) CPTGraphHostingView *hostView;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
+@interface CommuteTimeScatterPlotViewController : GraphViewController
 @end

@@ -30,19 +30,22 @@
 
     //Tab 1 - Root Commute VC
     RootViewController *rootCommuteVC = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    rootCommuteVC.title = @"Commute";
     UINavigationController *tab1 = [[UINavigationController alloc] initWithRootViewController:rootCommuteVC];
     
     //Tab 2 - GraphListVC
-    GraphListViewController *statsVC = [[GraphListViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *tab2 = [[UINavigationController alloc] initWithRootViewController:statsVC];
+    GraphListViewController *listVC = [[GraphListViewController alloc] initWithStyle:UITableViewStylePlain];
+    listVC.title = @"Graphs";
+    UINavigationController *tab2 = [[UINavigationController alloc] initWithRootViewController:listVC];
     
     //Tab 3 - CommuteListVC
     CommuteListViewController *commuteListVC = [[CommuteListViewController alloc] initWithStyle:UITableViewStylePlain];
+    commuteListVC.title = @"Commute History";
     UINavigationController *tab3 = [[UINavigationController alloc] initWithRootViewController:commuteListVC];
-    
-    
+                                    
     //Tab 4 - Settings VC
     SettingsTableViewController *settingsVC = [[SettingsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    settingsVC.title = @"Settings";
     UINavigationController *tab4 = [[UINavigationController alloc] initWithRootViewController:settingsVC];
     
     //Initilize the Tab Bar
@@ -51,7 +54,7 @@
     
     //Connect the core data
     rootCommuteVC.managedObjectContext = self.managedObjectContext;
-    statsVC.managedObjectContext = self.managedObjectContext;
+    listVC.managedObjectContext = self.managedObjectContext;
     commuteListVC.managedObjectContext = self.managedObjectContext;
     self.window.rootViewController = tabBarController;
     // Override point for customization after application launch.

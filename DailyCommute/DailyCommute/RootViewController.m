@@ -28,10 +28,8 @@
     [super viewDidLoad];  
     
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    
     //Initilize objects
     isCommuting = NO;
-    
     cancelBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelRoute:)];
     checkBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finishRecordingRoute)];
     
@@ -70,9 +68,9 @@
     titleLabel.shadowOffset = CGSizeMake(2,2);
 	titleLabel.textAlignment = UITextAlignmentCenter;
 	titleLabel.textColor =[UIColor whiteColor];
-	titleLabel.text = self.title;	
+	titleLabel.text = self.title;
     
-	self.navigationItem.titleView = titleLabel;	
+	self.navigationItem.titleView = titleLabel;
     
     backgroundImage.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     //Show main View
@@ -87,6 +85,9 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+-(void) showCountDownTimer {
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -140,7 +141,7 @@
         NSLog(@"Error in core data");
     }
     //If the commute doesnt exist, make it
-    if([objects count]==0){
+    if([objects count] == 0){
         return nil;
     }else{
         return [objects objectAtIndex:0];

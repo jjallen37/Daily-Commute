@@ -1,30 +1,22 @@
 //
 //  GraphViewController.h
-//  DailyCommute
+//  Daily-Commute
 //
-//  Created by Weston Catron on 4/17/12.
-//  Copyright (c) 2012 Valley Rocket. All rights reserved.
+//  Created by James Allen on 9/1/12.
+//  Copyright (c) 2012 James Allen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "GraphView.h"
-#import "Route.h"
 
-@class GraphViewController;
+@interface GraphViewController : UIViewController <NSFetchedResultsControllerDelegate, CPTPlotDataSource>
 
-@protocol GraphViewControllerDataSource <NSObject>
-
--(NSArray *)getToRoutes;
--(NSArray *)getFromRoutes;
-
-@end
-
-@interface GraphViewController : UIViewController <GraphViewDataSource> {
-    GraphView *view;
-    id <GraphViewControllerDataSource> dataSource;
-}
-
-@property (nonatomic, strong) GraphView *view;
-@property (nonatomic, strong) id <GraphViewControllerDataSource> dataSource;
+@property (nonatomic, strong) CPTGraphHostingView *hostView;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSMutableArray *routeArray;
+@property (strong, nonatomic) NSMutableArray *timeIntervalArray;
+@property (strong, nonatomic) NSMutableArray *dateStringArray;
 
 @end

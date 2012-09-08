@@ -9,7 +9,9 @@
 #endif
 
 #ifdef __OBJC__
+    #import "AppDelegate.h"
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import "Core Plot/CorePlot-CocoaTouch.h"
 #endif

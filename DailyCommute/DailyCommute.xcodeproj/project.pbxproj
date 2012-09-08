@@ -55,7 +55,6 @@
 		56D7E8B1150A321400515D7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E875150A321300515D7D /* AppDelegate.m */; };
 		56D7E8B3150A321400515D7D /* DailyCommute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E878150A321300515D7D /* DailyCommute.xcdatamodeld */; };
 		56D7E8B4150A321400515D7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E87B150A321300515D7D /* InfoPlist.strings */; };
-		56D7E8B5150A321400515D7D /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E87D150A321300515D7D /* GraphView.m */; };
 		56D7E8B6150A321400515D7D /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E87F150A321300515D7D /* Cancel.png */; };
 		56D7E8B7150A321400515D7D /* Cancel_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E880150A321300515D7D /* Cancel_Pressed.png */; };
 		56D7E8B8150A321400515D7D /* ClockBackground copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E881150A321300515D7D /* ClockBackground copy.png */; };
@@ -95,20 +94,12 @@
 		56D7E8DD150A321400515D7D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8AA150A321400515D7D /* RootViewController.m */; };
 		56D7E8DE150A321400515D7D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E8AB150A321400515D7D /* RootViewController.xib */; };
 		56D7E8E0150A321400515D7D /* Signika-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E8AE150A321400515D7D /* Signika-Bold.otf */; };
-		56D7E8E1150A321400515D7D /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8B0150A321400515D7D /* StatsViewController.m */; };
 		56D7E8E6150A343100515D7D /* RecieptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8E4150A343100515D7D /* RecieptViewController.m */; };
 		56D7E8E7150A343100515D7D /* RecieptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E8E5150A343100515D7D /* RecieptViewController.xib */; };
-		56D7E8F5150A351300515D7D /* ECCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8EB150A351300515D7D /* ECCommon.m */; };
-		56D7E8F6150A351300515D7D /* ECGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8EE150A351300515D7D /* ECGraph.m */; };
-		56D7E8F7150A351300515D7D /* ECGraphItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8F0150A351300515D7D /* ECGraphItem.m */; };
-		56D7E8F8150A351300515D7D /* ECGraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8F2150A351300515D7D /* ECGraphLine.m */; };
-		56D7E8F9150A351300515D7D /* ECGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E8F4150A351300515D7D /* ECGraphPoint.m */; };
 		56D7E8FB150A352B00515D7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D7E8FA150A352B00515D7D /* CoreLocation.framework */; };
-		56D7E9A9150A96AD00515D7D /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D7E9A8150A96AD00515D7D /* StatsViewController.xib */; };
 		56D7E9BD150D885B00515D7D /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E9BC150D885A00515D7D /* Route.m */; };
 		56D8B1BB15F93C170073FEF9 /* CommuteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D8B1BA15F93C170073FEF9 /* CommuteListViewController.m */; };
 		56D8B1C415F93C2F0073FEF9 /* GraphListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D8B1C315F93C2F0073FEF9 /* GraphListViewController.m */; };
-		56D8B21F15F968470073FEF9 /* CommuteTimeScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D8B21E15F968470073FEF9 /* CommuteTimeScatterPlotViewController.m */; };
 		56EC145915215B84009E0F68 /* CurrentRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EC145715215B84009E0F68 /* CurrentRouteViewController.m */; };
 		56EC145A15215B84009E0F68 /* CurrentRouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EC145815215B84009E0F68 /* CurrentRouteViewController.xib */; };
 		56EC146E1522837D009E0F68 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EC146D1522837D009E0F68 /* CustomNavigationBar.m */; };
@@ -145,12 +136,28 @@
 		AD62F76F153A692E002C7DA6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD62F76E153A692E002C7DA6 /* StoreKit.framework */; };
 		AD62F772153A6CD9002C7DA6 /* pro.png in Resources */ = {isa = PBXBuildFile; fileRef = AD62F770153A6CD9002C7DA6 /* pro.png */; };
 		AD62F773153A6CD9002C7DA6 /* propressed.png in Resources */ = {isa = PBXBuildFile; fileRef = AD62F771153A6CD9002C7DA6 /* propressed.png */; };
-		ADF51F94153E3AA000A2AC6F /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF51F93153E3AA000A2AC6F /* GraphViewController.m */; };
-		ADF51F97153E3B2700A2AC6F /* TotalsGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF51F96153E3B2700A2AC6F /* TotalsGraph.m */; };
 		ADF51F9A153E443600A2AC6F /* Arrive.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF51F98153E443600A2AC6F /* Arrive.png */; };
 		ADF51F9B153E443600A2AC6F /* ArrivePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF51F99153E443600A2AC6F /* ArrivePressed.png */; };
 		ADF8CA7215293B3A000147F6 /* NavBar@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF8CA7115293B3A000147F6 /* NavBar@1x.png */; };
 		ADF8CA7915294015000147F6 /* StatFade.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF8CA7815294015000147F6 /* StatFade.png */; };
+		DCC0BCDB15F97FE8004ACB50 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC0BCD815F97ADB004ACB50 /* libCorePlot-CocoaTouch.a */; };
+		DCC0BCE015F98081004ACB50 /* BarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCDD15F98081004ACB50 /* BarGraphViewController.m */; };
+		DCC0BCE115F98081004ACB50 /* CommuteTimeScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCDF15F98081004ACB50 /* CommuteTimeScatterPlotViewController.m */; };
+		DCC0BCF315F982AB004ACB50 /* ECGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEC15F982AB004ACB50 /* ECGraph.m */; };
+		DCC0BCF415F982AB004ACB50 /* ECGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEC15F982AB004ACB50 /* ECGraph.m */; };
+		DCC0BCF515F982AB004ACB50 /* ECGraphItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */; };
+		DCC0BCF615F982AB004ACB50 /* ECGraphItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */; };
+		DCC0BCF715F982AB004ACB50 /* ECGraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */; };
+		DCC0BCF815F982AB004ACB50 /* ECGraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */; };
+		DCC0BCF915F982AB004ACB50 /* ECGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */; };
+		DCC0BCFA15F982AB004ACB50 /* ECGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */; };
+		DCC0BCFD15F982B6004ACB50 /* ECCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCFC15F982B6004ACB50 /* ECCommon.m */; };
+		DCC0BCFE15F982B6004ACB50 /* ECCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCFC15F982B6004ACB50 /* ECCommon.m */; };
+		DCC0BD0115F98323004ACB50 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BD0015F98323004ACB50 /* GraphViewController.m */; };
+		DCC0BD0215F98323004ACB50 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BD0015F98323004ACB50 /* GraphViewController.m */; };
+		DCC0BD0415F98423004ACB50 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC0BD0315F98423004ACB50 /* QuartzCore.framework */; };
+		DCC0BD0615F98CAB004ACB50 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */; };
+		DCC0BD0715F98CAB004ACB50 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */; };
 		F31CC6761586926700398EA4 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31CC6741586926700398EA4 /* TipsViewController.m */; };
 		F31CC6771586926700398EA4 /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31CC6751586926700398EA4 /* TipsViewController.xib */; };
 		F31CC67A158692CE00398EA4 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31CC679158692CE00398EA4 /* Twitter.framework */; };
@@ -228,7 +235,6 @@
 		56D7E875150A321300515D7D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		56D7E879150A321300515D7D /* DailyCommute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyCommute.xcdatamodel; sourceTree = "<group>"; };
 		56D7E87C150A321300515D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		56D7E87D150A321300515D7D /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		56D7E87F150A321300515D7D /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cancel.png; sourceTree = "<group>"; };
 		56D7E880150A321300515D7D /* Cancel_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cancel_Pressed.png; sourceTree = "<group>"; };
 		56D7E881150A321300515D7D /* ClockBackground copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClockBackground copy.png"; sourceTree = "<group>"; };
@@ -270,24 +276,10 @@
 		56D7E8AA150A321400515D7D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		56D7E8AB150A321400515D7D /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		56D7E8AE150A321400515D7D /* Signika-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-Bold.otf"; sourceTree = "<group>"; };
-		56D7E8AF150A321400515D7D /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		56D7E8B0150A321400515D7D /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		56D7E8E3150A343100515D7D /* RecieptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptViewController.h; sourceTree = "<group>"; };
 		56D7E8E4150A343100515D7D /* RecieptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptViewController.m; sourceTree = "<group>"; };
 		56D7E8E5150A343100515D7D /* RecieptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecieptViewController.xib; sourceTree = "<group>"; };
-		56D7E8E9150A34A400515D7D /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
-		56D7E8EA150A351300515D7D /* ECCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECCommon.h; path = ../ECCommon.h; sourceTree = "<group>"; };
-		56D7E8EB150A351300515D7D /* ECCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECCommon.m; path = ../ECCommon.m; sourceTree = "<group>"; };
-		56D7E8ED150A351300515D7D /* ECGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraph.h; sourceTree = "<group>"; };
-		56D7E8EE150A351300515D7D /* ECGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraph.m; sourceTree = "<group>"; };
-		56D7E8EF150A351300515D7D /* ECGraphItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphItem.h; sourceTree = "<group>"; };
-		56D7E8F0150A351300515D7D /* ECGraphItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphItem.m; sourceTree = "<group>"; };
-		56D7E8F1150A351300515D7D /* ECGraphLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphLine.h; sourceTree = "<group>"; };
-		56D7E8F2150A351300515D7D /* ECGraphLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphLine.m; sourceTree = "<group>"; };
-		56D7E8F3150A351300515D7D /* ECGraphPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphPoint.h; sourceTree = "<group>"; };
-		56D7E8F4150A351300515D7D /* ECGraphPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphPoint.m; sourceTree = "<group>"; };
 		56D7E8FA150A352B00515D7D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		56D7E9A8150A96AD00515D7D /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		56D7E9BB150D885A00515D7D /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		56D7E9BC150D885A00515D7D /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		56D8B1B915F93C170073FEF9 /* CommuteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteListViewController.h; sourceTree = "<group>"; };
@@ -370,8 +362,6 @@
 		56D8B21A15F968390073FEF9 /* CPTXYAxisSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYAxisSet.h; sourceTree = "<group>"; };
 		56D8B21B15F968390073FEF9 /* CPTXYGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYGraph.h; sourceTree = "<group>"; };
 		56D8B21C15F968390073FEF9 /* CPTXYPlotSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTXYPlotSpace.h; sourceTree = "<group>"; };
-		56D8B21D15F968470073FEF9 /* CommuteTimeScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteTimeScatterPlotViewController.h; sourceTree = "<group>"; };
-		56D8B21E15F968470073FEF9 /* CommuteTimeScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteTimeScatterPlotViewController.m; sourceTree = "<group>"; };
 		56EC145615215B84009E0F68 /* CurrentRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentRouteViewController.h; sourceTree = "<group>"; };
 		56EC145715215B84009E0F68 /* CurrentRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentRouteViewController.m; sourceTree = "<group>"; };
 		56EC145815215B84009E0F68 /* CurrentRouteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentRouteViewController.xib; sourceTree = "<group>"; };
@@ -413,14 +403,29 @@
 		AD62F76E153A692E002C7DA6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AD62F770153A6CD9002C7DA6 /* pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pro.png; path = "4:14:12/pro.png"; sourceTree = "<group>"; };
 		AD62F771153A6CD9002C7DA6 /* propressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = propressed.png; path = "4:14:12/propressed.png"; sourceTree = "<group>"; };
-		ADF51F92153E3AA000A2AC6F /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
-		ADF51F93153E3AA000A2AC6F /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
-		ADF51F95153E3B2700A2AC6F /* TotalsGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalsGraph.h; sourceTree = "<group>"; };
-		ADF51F96153E3B2700A2AC6F /* TotalsGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsGraph.m; sourceTree = "<group>"; };
 		ADF51F98153E443600A2AC6F /* Arrive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrive.png; sourceTree = "<group>"; };
 		ADF51F99153E443600A2AC6F /* ArrivePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrivePressed.png; sourceTree = "<group>"; };
 		ADF8CA7115293B3A000147F6 /* NavBar@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavBar@1x.png"; path = "3:29:12/NavBar@1x.png"; sourceTree = "<group>"; };
 		ADF8CA7815294015000147F6 /* StatFade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatFade.png; path = ../StatFade.png; sourceTree = "<group>"; };
+		DCC0BCD815F97ADB004ACB50 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "DailyCommute/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		DCC0BCDC15F98081004ACB50 /* BarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarGraphViewController.h; sourceTree = "<group>"; };
+		DCC0BCDD15F98081004ACB50 /* BarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarGraphViewController.m; sourceTree = "<group>"; };
+		DCC0BCDE15F98081004ACB50 /* CommuteTimeScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteTimeScatterPlotViewController.h; sourceTree = "<group>"; };
+		DCC0BCDF15F98081004ACB50 /* CommuteTimeScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteTimeScatterPlotViewController.m; sourceTree = "<group>"; };
+		DCC0BCEB15F982AB004ACB50 /* ECGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraph.h; sourceTree = "<group>"; };
+		DCC0BCEC15F982AB004ACB50 /* ECGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraph.m; sourceTree = "<group>"; };
+		DCC0BCED15F982AB004ACB50 /* ECGraphItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphItem.h; sourceTree = "<group>"; };
+		DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphItem.m; sourceTree = "<group>"; };
+		DCC0BCEF15F982AB004ACB50 /* ECGraphLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphLine.h; sourceTree = "<group>"; };
+		DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphLine.m; sourceTree = "<group>"; };
+		DCC0BCF115F982AB004ACB50 /* ECGraphPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphPoint.h; sourceTree = "<group>"; };
+		DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphPoint.m; sourceTree = "<group>"; };
+		DCC0BCFB15F982B6004ACB50 /* ECCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCommon.h; sourceTree = "<group>"; };
+		DCC0BCFC15F982B6004ACB50 /* ECCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCommon.m; sourceTree = "<group>"; };
+		DCC0BCFF15F98322004ACB50 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		DCC0BD0015F98323004ACB50 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		DCC0BD0315F98423004ACB50 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
 		F31CC6731586926700398EA4 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		F31CC6741586926700398EA4 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		F31CC6751586926700398EA4 /* TipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
@@ -432,6 +437,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC0BD0415F98423004ACB50 /* QuartzCore.framework in Frameworks */,
 				F31CC67A158692CE00398EA4 /* Twitter.framework in Frameworks */,
 				AD62F76F153A692E002C7DA6 /* StoreKit.framework in Frameworks */,
 				AD03B8B7150F0B9200BE5208 /* iAd.framework in Frameworks */,
@@ -440,6 +446,7 @@
 				56D7E842150A318100515D7D /* Foundation.framework in Frameworks */,
 				56D7E844150A318100515D7D /* CoreGraphics.framework in Frameworks */,
 				56D7E846150A318100515D7D /* CoreData.framework in Frameworks */,
+				DCC0BCDB15F97FE8004ACB50 /* libCorePlot-CocoaTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +544,8 @@
 		56D7E83E150A318100515D7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCC0BCD815F97ADB004ACB50 /* libCorePlot-CocoaTouch.a */,
+				DCC0BD0315F98423004ACB50 /* QuartzCore.framework */,
 				F31CC679158692CE00398EA4 /* Twitter.framework */,
 				AD62F76E153A692E002C7DA6 /* StoreKit.framework */,
 				AD03B8B6150F0B9200BE5208 /* iAd.framework */,
@@ -560,7 +569,6 @@
 				56D8B1C715F93CD80073FEF9 /* Commute List */,
 				5683B439152295700033FBF3 /* Settings */,
 				56D8B1C915F93D5E0073FEF9 /* Graph List */,
-				ADF51F8C153E39A900A2AC6F /* Stats */,
 				56D7E848150A318200515D7D /* Supporting Files */,
 			);
 			path = DailyCommute;
@@ -569,8 +577,8 @@
 		56D7E848150A318200515D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCC0BCEA15F982AB004ACB50 /* ECGraph */,
 				56D8B1D015F968390073FEF9 /* Core Plot */,
-				56D7E8EC150A351300515D7D /* ECGraph */,
 				56D8B1C515F93C9A0073FEF9 /* In-App Purchase */,
 				56D8B1C815F93D0E0073FEF9 /* Custom Navbar */,
 				56D7E87E150A321300515D7D /* images */,
@@ -686,23 +694,6 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
-		56D7E8EC150A351300515D7D /* ECGraph */ = {
-			isa = PBXGroup;
-			children = (
-				56D7E8EA150A351300515D7D /* ECCommon.h */,
-				56D7E8EB150A351300515D7D /* ECCommon.m */,
-				56D7E8ED150A351300515D7D /* ECGraph.h */,
-				56D7E8EE150A351300515D7D /* ECGraph.m */,
-				56D7E8EF150A351300515D7D /* ECGraphItem.h */,
-				56D7E8F0150A351300515D7D /* ECGraphItem.m */,
-				56D7E8F1150A351300515D7D /* ECGraphLine.h */,
-				56D7E8F2150A351300515D7D /* ECGraphLine.m */,
-				56D7E8F3150A351300515D7D /* ECGraphPoint.h */,
-				56D7E8F4150A351300515D7D /* ECGraphPoint.m */,
-			);
-			path = ECGraph;
-			sourceTree = "<group>";
-		};
 		56D8B1C515F93C9A0073FEF9 /* In-App Purchase */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,12 +744,15 @@
 		56D8B1C915F93D5E0073FEF9 /* Graph List */ = {
 			isa = PBXGroup;
 			children = (
+				DCC0BCFF15F98322004ACB50 /* GraphViewController.h */,
+				DCC0BD0015F98323004ACB50 /* GraphViewController.m */,
+				DCC0BCDC15F98081004ACB50 /* BarGraphViewController.h */,
+				DCC0BCDD15F98081004ACB50 /* BarGraphViewController.m */,
+				DCC0BCDE15F98081004ACB50 /* CommuteTimeScatterPlotViewController.h */,
+				DCC0BCDF15F98081004ACB50 /* CommuteTimeScatterPlotViewController.m */,
 				56D8B1C215F93C2F0073FEF9 /* GraphListViewController.h */,
 				56D8B1C315F93C2F0073FEF9 /* GraphListViewController.m */,
-				56D8B21D15F968470073FEF9 /* CommuteTimeScatterPlotViewController.h */,
-				56D8B21E15F968470073FEF9 /* CommuteTimeScatterPlotViewController.m */,
-				56D7E8E9150A34A400515D7D /* GraphView.h */,
-				56D7E87D150A321300515D7D /* GraphView.m */,
+				DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */,
 			);
 			name = "Graph List";
 			sourceTree = "<group>";
@@ -891,26 +885,21 @@
 			name = "4:14:12";
 			sourceTree = "<group>";
 		};
-		ADF51F8C153E39A900A2AC6F /* Stats */ = {
+		DCC0BCEA15F982AB004ACB50 /* ECGraph */ = {
 			isa = PBXGroup;
 			children = (
-				ADF51F92153E3AA000A2AC6F /* GraphViewController.h */,
-				ADF51F93153E3AA000A2AC6F /* GraphViewController.m */,
-				ADF51F8E153E39B000A2AC6F /* Graphs */,
-				56D7E8AF150A321400515D7D /* StatsViewController.h */,
-				56D7E8B0150A321400515D7D /* StatsViewController.m */,
-				56D7E9A8150A96AD00515D7D /* StatsViewController.xib */,
+				DCC0BCFB15F982B6004ACB50 /* ECCommon.h */,
+				DCC0BCFC15F982B6004ACB50 /* ECCommon.m */,
+				DCC0BCEB15F982AB004ACB50 /* ECGraph.h */,
+				DCC0BCEC15F982AB004ACB50 /* ECGraph.m */,
+				DCC0BCED15F982AB004ACB50 /* ECGraphItem.h */,
+				DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */,
+				DCC0BCEF15F982AB004ACB50 /* ECGraphLine.h */,
+				DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */,
+				DCC0BCF115F982AB004ACB50 /* ECGraphPoint.h */,
+				DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */,
 			);
-			name = Stats;
-			sourceTree = "<group>";
-		};
-		ADF51F8E153E39B000A2AC6F /* Graphs */ = {
-			isa = PBXGroup;
-			children = (
-				ADF51F95153E3B2700A2AC6F /* TotalsGraph.h */,
-				ADF51F96153E3B2700A2AC6F /* TotalsGraph.m */,
-			);
-			name = Graphs;
+			path = ECGraph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1024,7 +1013,6 @@
 				56D7E8DE150A321400515D7D /* RootViewController.xib in Resources */,
 				56D7E8E0150A321400515D7D /* Signika-Bold.otf in Resources */,
 				56D7E8E7150A343100515D7D /* RecieptViewController.xib in Resources */,
-				56D7E9A9150A96AD00515D7D /* StatsViewController.xib in Resources */,
 				AD03B8B2150F0B4D00BE5208 /* 57.png in Resources */,
 				AD03B8B5150F0B5000BE5208 /* 114.png in Resources */,
 				AD03B8BC150F0BCC00BE5208 /* fromdate_pressed.png in Resources */,
@@ -1083,6 +1071,7 @@
 				56FDDD7C15574F06002382A9 /* bg.png in Resources */,
 				F31CC6771586926700398EA4 /* TipsViewController.xib in Resources */,
 				56609AEB1588C20D00E93FF0 /* CountDownViewController.xib in Resources */,
+				DCC0BD0615F98CAB004ACB50 /* GraphViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,6 +1080,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D7E868150A318200515D7D /* InfoPlist.strings in Resources */,
+				DCC0BD0715F98CAB004ACB50 /* GraphViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,16 +1110,9 @@
 				56D7E84E150A318200515D7D /* main.m in Sources */,
 				56D7E8B1150A321400515D7D /* AppDelegate.m in Sources */,
 				56D7E8B3150A321400515D7D /* DailyCommute.xcdatamodeld in Sources */,
-				56D7E8B5150A321400515D7D /* GraphView.m in Sources */,
 				56D7E8D8150A321400515D7D /* InformationTableViewController.m in Sources */,
 				56D7E8DD150A321400515D7D /* RootViewController.m in Sources */,
-				56D7E8E1150A321400515D7D /* StatsViewController.m in Sources */,
 				56D7E8E6150A343100515D7D /* RecieptViewController.m in Sources */,
-				56D7E8F5150A351300515D7D /* ECCommon.m in Sources */,
-				56D7E8F6150A351300515D7D /* ECGraph.m in Sources */,
-				56D7E8F7150A351300515D7D /* ECGraphItem.m in Sources */,
-				56D7E8F8150A351300515D7D /* ECGraphLine.m in Sources */,
-				56D7E8F9150A351300515D7D /* ECGraphPoint.m in Sources */,
 				56D7E9BD150D885B00515D7D /* Route.m in Sources */,
 				56F91BA21517FD43007F5326 /* Commute.m in Sources */,
 				5692E2BD15195B8200137A16 /* InfoTableCell.m in Sources */,
@@ -1143,14 +1126,19 @@
 				56532A5B1527A0A4003E7C94 /* SettingsCell.m in Sources */,
 				AD62F729153A5165002C7DA6 /* ICB_WeatherConditions.m in Sources */,
 				AD62F76D153A677E002C7DA6 /* InAppPurchaseManager.m in Sources */,
-				ADF51F94153E3AA000A2AC6F /* GraphViewController.m in Sources */,
-				ADF51F97153E3B2700A2AC6F /* TotalsGraph.m in Sources */,
 				560DA1351549C3E0001A0750 /* TutorialModalViewController.m in Sources */,
 				F31CC6761586926700398EA4 /* TipsViewController.m in Sources */,
 				56609AEA1588C20D00E93FF0 /* CountDownViewController.m in Sources */,
 				56D8B1BB15F93C170073FEF9 /* CommuteListViewController.m in Sources */,
 				56D8B1C415F93C2F0073FEF9 /* GraphListViewController.m in Sources */,
-				56D8B21F15F968470073FEF9 /* CommuteTimeScatterPlotViewController.m in Sources */,
+				DCC0BCE015F98081004ACB50 /* BarGraphViewController.m in Sources */,
+				DCC0BCE115F98081004ACB50 /* CommuteTimeScatterPlotViewController.m in Sources */,
+				DCC0BCF315F982AB004ACB50 /* ECGraph.m in Sources */,
+				DCC0BCF515F982AB004ACB50 /* ECGraphItem.m in Sources */,
+				DCC0BCF715F982AB004ACB50 /* ECGraphLine.m in Sources */,
+				DCC0BCF915F982AB004ACB50 /* ECGraphPoint.m in Sources */,
+				DCC0BCFD15F982B6004ACB50 /* ECCommon.m in Sources */,
+				DCC0BD0115F98323004ACB50 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1147,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D7E86B150A318200515D7D /* DailyCommuteTests.m in Sources */,
+				DCC0BCF415F982AB004ACB50 /* ECGraph.m in Sources */,
+				DCC0BCF615F982AB004ACB50 /* ECGraphItem.m in Sources */,
+				DCC0BCF815F982AB004ACB50 /* ECGraphLine.m in Sources */,
+				DCC0BCFA15F982AB004ACB50 /* ECGraphPoint.m in Sources */,
+				DCC0BCFE15F982B6004ACB50 /* ECCommon.m in Sources */,
+				DCC0BD0215F98323004ACB50 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1264,6 +1258,10 @@
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DailyCommute\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1285,6 +1283,10 @@
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DailyCommute\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1370,6 +1372,10 @@
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DailyCommute\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",

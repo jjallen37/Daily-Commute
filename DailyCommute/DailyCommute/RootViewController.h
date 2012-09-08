@@ -15,7 +15,7 @@
 #import "RecieptViewController.h"
 #import "SettingsTableViewController.h"
 
-@interface RootViewController : UIViewController<CurrentRouteViewControllerDelegate,SKPaymentTransactionObserver, SKProductsRequestDelegate,SKRequestDelegate> {
+@interface RootViewController : UIViewController <CurrentRouteViewControllerDelegate,SKPaymentTransactionObserver, SKProductsRequestDelegate,SKRequestDelegate> {
     IBOutlet UIImageView *backgroundImage;
     BOOL isCommuting;
     BOOL isToCommute;//True if To, false if from
@@ -68,7 +68,7 @@
 
 //Returns to the main screen
 -(void)showMainScreen:(id)sender;
-- (void)showCountDownTimer;
+-(void)showCountDownTimer;
 -(IBAction)purchaseInApp:(id)sender;
 
 @end
