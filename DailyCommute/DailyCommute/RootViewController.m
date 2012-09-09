@@ -99,11 +99,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)showNewCommuteController {
-    NewCommuteModalNavigationController *ncVC = [[NewCommuteModalNavigationController alloc] init];
-    [self presentModalViewController:ncVC animated:YES];
-}
-
 -(void)viewDidAppear:(BOOL)animated{
     if (self.currentCommute == nil){
         self.title = @"Commute";

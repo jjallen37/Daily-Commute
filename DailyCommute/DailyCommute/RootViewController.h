@@ -18,23 +18,21 @@
 @interface RootViewController : UIViewController <CurrentRouteViewControllerDelegate,SKPaymentTransactionObserver, SKProductsRequestDelegate,SKRequestDelegate> {
     IBOutlet UIImageView *backgroundImage;
     BOOL isCommuting;
-    BOOL isToCommute;//True if To, false if from
+    BOOL isToCommute; //True if To, false if from
     NSTimer *infoTimer;
     IBOutlet UIImageView *sorryView;
     __weak IBOutlet UILabel *sorryLabel;
     UILabel *titleLabel;//Created to show custom fonts
-    
-    IBOutlet UILabel *commuteLabel;//The label at the top with the commute name
-    IBOutlet UIView *clockView;//Holds buttons to start commute
-    IBOutlet UILabel *timeHoursMinutesLabel;//Big text current time HH:MM
-    IBOutlet UILabel *timeTodaysDateLabel;//MMM DD, YYYY
+    //IBOutlet UILabel *commuteLabel; The label at the top with the commute name
+    IBOutlet UIView *clockView; //Holds buttons to start commute
+    IBOutlet UILabel *timeHoursMinutesLabel; //Big text current time HH:MM
+    IBOutlet UILabel *timeTodaysDateLabel; //MM DD, YYYY
     
     IBOutlet UILabel *weatherLabel;
     UIBarButtonItem *cancelBarButton;
     UIBarButtonItem *checkBarButton;
     
     IBOutlet UIButton *toCommuteButton;
-    IBOutlet UIButton *fromCommuteButton;
     
     IBOutlet UITableView *informationTableView;
     

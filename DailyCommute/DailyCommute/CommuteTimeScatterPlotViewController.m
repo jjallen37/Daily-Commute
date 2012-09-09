@@ -19,6 +19,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self initPlot];
+    [self fetchResults];
 }
 
 #pragma mark - Chart behavior
@@ -38,7 +39,7 @@
 -(void)configureGraph {
     // 1 - Create the graph
     CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];
-    [graph applyTheme:[CPTTheme themeNamed:kCPTDarkGradientTheme]];
+    [graph applyTheme:[CPTTheme themeNamed:kCPTStocksTheme]];
     self.hostView.hostedGraph = graph;
     // 2 - Set graph title
     NSString *title = @"Commutes";
@@ -46,7 +47,7 @@
     // 3 - Create and set text style
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
     titleStyle.color = [CPTColor whiteColor];
-    titleStyle.fontName = @"Helvetica-Bold";
+    titleStyle.fontName = @"Signika-Bold";
     titleStyle.fontSize = 16.0f;
     graph.titleTextStyle = titleStyle;
     graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
@@ -69,7 +70,7 @@
     CPTColor *commuteColor = [CPTColor colorWithComponentRed:0.788f green:0.2f blue:0.0f alpha:1.0f];
     [graph addPlot:commutes toPlotSpace:plotSpace];
     // 3 - Set up plot space
-    [plotSpace scaleToFitPlots:[NSArray arrayWithObjects:commutes, nil]];
+    [plotSpace scaleToFitPlots:@[commutes]];
     CPTMutablePlotRange *xRange = [plotSpace.xRange mutableCopy];
     [xRange expandRangeByFactor:CPTDecimalFromCGFloat(1.1f)];
     plotSpace.xRange = xRange;
@@ -94,14 +95,14 @@
     // 1 - Create styles
     CPTMutableTextStyle *axisTitleStyle = [CPTMutableTextStyle textStyle];
     axisTitleStyle.color = [CPTColor whiteColor];
-    axisTitleStyle.fontName = @"Helvetica-Bold";
+    axisTitleStyle.fontName = @"Signika-Bold";
     axisTitleStyle.fontSize = 12.0f;
     CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
     axisLineStyle.lineWidth = 2.0f;
     axisLineStyle.lineColor = [CPTColor whiteColor];
     CPTMutableTextStyle *axisTextStyle = [[CPTMutableTextStyle alloc] init];
     axisTextStyle.color = [CPTColor whiteColor];
-    axisTextStyle.fontName = @"Helvetica-Bold";
+    axisTextStyle.fontName = @"Signika-Bold";
     axisTextStyle.fontSize = 11.0f;
     CPTMutableLineStyle *tickLineStyle = [CPTMutableLineStyle lineStyle];
     tickLineStyle.lineColor = [CPTColor whiteColor];
@@ -173,7 +174,7 @@
             [yMinorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInteger(j)]];
         }
     }
-    y.axisLabels = yLabels;    
+    y.axisLabels = yLabels;
     y.majorTickLocations = yMajorLocations;
     y.minorTickLocations = yMinorLocations;
 }
@@ -191,6 +192,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.timeIntervalArray = [[NSMutableArray alloc] init];
+    self.dateStringArray = [[NSMutableArray alloc] init];
+    self.routeArray = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -227,7 +231,7 @@
 
 #pragma mark - Fetched results controller
 
-- (NSFetchedResultsController *) fetchedResultsController
+- (void) fetchResults
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -237,28 +241,32 @@
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
-    
-    // Set predicate for sort orderings
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"commute.name == 'Work'"];
+    NSString *currentCommuteName = [[NSUserDefaults standardUserDefaults] valueForKey:kCurrentCommuteKey];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"toCommute.name == '%@'", currentCommuteName];
     [fetchRequest setPredicate:predicate];
     
-    
 	NSError *error;
+    
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    [fetchRequest setSortDescriptors:sortDescriptors];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     for (Route *route in array) {
-        [self.routeArray addObject:route];
-        NSNumber *time = [NSNumber numberWithInteger:[route.endTime timeIntervalSinceDate:route.startTime]];
-        [self.timeIntervalArray addObject:time];
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        df.dateFormat = @"'MM'/'dd'/'yyyy'";
-        NSString* dateString = [df stringFromDate:route.endTime];
-        [self.dateStringArray addObject:dateString];
+        if (route) {
+            [self.routeArray addObject:route];
+            NSNumber *time = [NSNumber numberWithInteger:[route.endTime timeIntervalSinceDate:route.startTime]];
+            [self.timeIntervalArray addObject:time];
+            NSDateFormatter *df = [[NSDateFormatter alloc] init];
+            df.dateFormat = @"'MM'/'dd'/'yyyy'";
+            NSString* dateString = [df stringFromDate:route.endTime];
+            [self.dateStringArray addObject:dateString];
+        }
     }
+    
+    NSLog(@"Time Intervals: %@", self.timeIntervalArray);
+    NSLog(@"Routes: %@", self.routeArray);
+    NSLog(@"Date Strings: %@", self.dateStringArray);
     error = nil;
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
@@ -272,8 +280,6 @@
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
-    
-    return self.fetchedResultsController;
 }
 
 @end

@@ -50,7 +50,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     // 3 - Set up styles
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
     titleStyle.color = [CPTColor whiteColor];
-    titleStyle.fontName = @"Helvetica-Bold";
+    titleStyle.fontName = @"Signika-Bold";
     titleStyle.fontSize = 16.0f;
     // 4 - Set up title
     NSString *title = @"Commutes";
@@ -94,7 +94,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     // 1 - Configure styles
     CPTMutableTextStyle *axisTitleStyle = [CPTMutableTextStyle textStyle];
     axisTitleStyle.color = [CPTColor whiteColor];
-    axisTitleStyle.fontName = @"Helvetica-Bold";
+    axisTitleStyle.fontName = @"Signika-Bold";
     axisTitleStyle.fontSize = 12.0f;
     CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
     axisLineStyle.lineWidth = 2.0f;

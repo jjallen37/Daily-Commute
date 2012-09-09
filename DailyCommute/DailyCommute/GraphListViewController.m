@@ -87,11 +87,13 @@
 
 -(void) viewCommuteGraph {
     CommuteTimeScatterPlotViewController *ctGraph = [[CommuteTimeScatterPlotViewController alloc] init];
-    [self presentViewController:ctGraph animated:YES completion:nil];
+    UINavigationController *nC = [[UINavigationController alloc] initWithRootViewController:ctGraph];
+    [self presentViewController:nC animated:YES completion:nil];
 }
 
 -(void) viewBarGraph {
     BarGraphViewController *bgGraph = [[BarGraphViewController alloc] init];
-    [self presentViewController:bgGraph animated:YES completion:nil];
+    UINavigationController *nC = [[UINavigationController alloc] initWithRootViewController:bgGraph];
+    [self presentViewController:nC animated:YES completion:nil];
 }
 @end
