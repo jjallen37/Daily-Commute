@@ -20,7 +20,8 @@
     BOOL isCommuting;
     BOOL isToCommute;//True if To, false if from
     NSTimer *infoTimer;
-    
+    IBOutlet UIImageView *sorryView;
+    __weak IBOutlet UILabel *sorryLabel;
     UILabel *titleLabel;//Created to show custom fonts
     
     IBOutlet UILabel *commuteLabel;//The label at the top with the commute name

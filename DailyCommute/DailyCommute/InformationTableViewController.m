@@ -120,7 +120,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return 4; //5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -205,13 +205,13 @@
             cell.infoDetailLabel.text = [dateFormatter stringFromDate:commute.toArrivalTime];
             [cell setInfoCellDetailBarStyle:InfoCellDetailBarStyleBlue];   
             break;
-        case 3:
-            cell.infoTitleLabel.text = @"Return By";
-            cell.infoDetailLabel.text = [dateFormatter stringFromDate:commute.fromArrivalTime];
-            [cell setInfoCellDetailBarStyle:InfoCellDetailBarStyleBlue]; 
-            break;
+//        case 3:
+//            cell.infoTitleLabel.text = @"Return By";
+//            cell.infoDetailLabel.text = [dateFormatter stringFromDate:commute.fromArrivalTime];
+//            [cell setInfoCellDetailBarStyle:InfoCellDetailBarStyleBlue]; 
+//            break;
             
-        case 4:
+        case 3:
             cell.infoTitleLabel.text = @"Est. Arrival";
             cell.infoDetailLabel.text = [dateFormatter stringFromDate:estimatedArrivalTime];
             

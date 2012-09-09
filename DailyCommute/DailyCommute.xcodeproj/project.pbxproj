@@ -143,21 +143,13 @@
 		DCC0BCDB15F97FE8004ACB50 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC0BCD815F97ADB004ACB50 /* libCorePlot-CocoaTouch.a */; };
 		DCC0BCE015F98081004ACB50 /* BarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCDD15F98081004ACB50 /* BarGraphViewController.m */; };
 		DCC0BCE115F98081004ACB50 /* CommuteTimeScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCDF15F98081004ACB50 /* CommuteTimeScatterPlotViewController.m */; };
-		DCC0BCF315F982AB004ACB50 /* ECGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEC15F982AB004ACB50 /* ECGraph.m */; };
-		DCC0BCF415F982AB004ACB50 /* ECGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEC15F982AB004ACB50 /* ECGraph.m */; };
-		DCC0BCF515F982AB004ACB50 /* ECGraphItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */; };
-		DCC0BCF615F982AB004ACB50 /* ECGraphItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */; };
-		DCC0BCF715F982AB004ACB50 /* ECGraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */; };
-		DCC0BCF815F982AB004ACB50 /* ECGraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */; };
-		DCC0BCF915F982AB004ACB50 /* ECGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */; };
-		DCC0BCFA15F982AB004ACB50 /* ECGraphPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */; };
-		DCC0BCFD15F982B6004ACB50 /* ECCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCFC15F982B6004ACB50 /* ECCommon.m */; };
-		DCC0BCFE15F982B6004ACB50 /* ECCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BCFC15F982B6004ACB50 /* ECCommon.m */; };
 		DCC0BD0115F98323004ACB50 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BD0015F98323004ACB50 /* GraphViewController.m */; };
 		DCC0BD0215F98323004ACB50 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0BD0015F98323004ACB50 /* GraphViewController.m */; };
 		DCC0BD0415F98423004ACB50 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC0BD0315F98423004ACB50 /* QuartzCore.framework */; };
 		DCC0BD0615F98CAB004ACB50 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */; };
 		DCC0BD0715F98CAB004ACB50 /* GraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */; };
+		DCC0BD1915FAE96D004ACB50 /* CommutesEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD1715FAE96D004ACB50 /* CommutesEmpty.png */; };
+		DCC0BD1A15FAE96D004ACB50 /* CommutesEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC0BD1815FAE96D004ACB50 /* CommutesEmpty@2x.png */; };
 		F31CC6761586926700398EA4 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31CC6741586926700398EA4 /* TipsViewController.m */; };
 		F31CC6771586926700398EA4 /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31CC6751586926700398EA4 /* TipsViewController.xib */; };
 		F31CC67A158692CE00398EA4 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31CC679158692CE00398EA4 /* Twitter.framework */; };
@@ -412,20 +404,12 @@
 		DCC0BCDD15F98081004ACB50 /* BarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarGraphViewController.m; sourceTree = "<group>"; };
 		DCC0BCDE15F98081004ACB50 /* CommuteTimeScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommuteTimeScatterPlotViewController.h; sourceTree = "<group>"; };
 		DCC0BCDF15F98081004ACB50 /* CommuteTimeScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommuteTimeScatterPlotViewController.m; sourceTree = "<group>"; };
-		DCC0BCEB15F982AB004ACB50 /* ECGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraph.h; sourceTree = "<group>"; };
-		DCC0BCEC15F982AB004ACB50 /* ECGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraph.m; sourceTree = "<group>"; };
-		DCC0BCED15F982AB004ACB50 /* ECGraphItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphItem.h; sourceTree = "<group>"; };
-		DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphItem.m; sourceTree = "<group>"; };
-		DCC0BCEF15F982AB004ACB50 /* ECGraphLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphLine.h; sourceTree = "<group>"; };
-		DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphLine.m; sourceTree = "<group>"; };
-		DCC0BCF115F982AB004ACB50 /* ECGraphPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGraphPoint.h; sourceTree = "<group>"; };
-		DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGraphPoint.m; sourceTree = "<group>"; };
-		DCC0BCFB15F982B6004ACB50 /* ECCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCommon.h; sourceTree = "<group>"; };
-		DCC0BCFC15F982B6004ACB50 /* ECCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCommon.m; sourceTree = "<group>"; };
 		DCC0BCFF15F98322004ACB50 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		DCC0BD0015F98323004ACB50 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		DCC0BD0315F98423004ACB50 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DCC0BD0515F98CAB004ACB50 /* GraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphViewController.xib; sourceTree = "<group>"; };
+		DCC0BD1715FAE96D004ACB50 /* CommutesEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CommutesEmpty.png; sourceTree = "<group>"; };
+		DCC0BD1815FAE96D004ACB50 /* CommutesEmpty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CommutesEmpty@2x.png"; sourceTree = "<group>"; };
 		F31CC6731586926700398EA4 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		F31CC6741586926700398EA4 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		F31CC6751586926700398EA4 /* TipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
@@ -577,7 +561,6 @@
 		56D7E848150A318200515D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DCC0BCEA15F982AB004ACB50 /* ECGraph */,
 				56D8B1D015F968390073FEF9 /* Core Plot */,
 				56D8B1C515F93C9A0073FEF9 /* In-App Purchase */,
 				56D8B1C815F93D0E0073FEF9 /* Custom Navbar */,
@@ -622,6 +605,8 @@
 		56D7E87E150A321300515D7D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DCC0BD1715FAE96D004ACB50 /* CommutesEmpty.png */,
+				DCC0BD1815FAE96D004ACB50 /* CommutesEmpty@2x.png */,
 				56FDDD7B15574F06002382A9 /* bg.png */,
 				ADF51F98153E443600A2AC6F /* Arrive.png */,
 				ADF51F99153E443600A2AC6F /* ArrivePressed.png */,
@@ -885,23 +870,6 @@
 			name = "4:14:12";
 			sourceTree = "<group>";
 		};
-		DCC0BCEA15F982AB004ACB50 /* ECGraph */ = {
-			isa = PBXGroup;
-			children = (
-				DCC0BCFB15F982B6004ACB50 /* ECCommon.h */,
-				DCC0BCFC15F982B6004ACB50 /* ECCommon.m */,
-				DCC0BCEB15F982AB004ACB50 /* ECGraph.h */,
-				DCC0BCEC15F982AB004ACB50 /* ECGraph.m */,
-				DCC0BCED15F982AB004ACB50 /* ECGraphItem.h */,
-				DCC0BCEE15F982AB004ACB50 /* ECGraphItem.m */,
-				DCC0BCEF15F982AB004ACB50 /* ECGraphLine.h */,
-				DCC0BCF015F982AB004ACB50 /* ECGraphLine.m */,
-				DCC0BCF115F982AB004ACB50 /* ECGraphPoint.h */,
-				DCC0BCF215F982AB004ACB50 /* ECGraphPoint.m */,
-			);
-			path = ECGraph;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1072,6 +1040,8 @@
 				F31CC6771586926700398EA4 /* TipsViewController.xib in Resources */,
 				56609AEB1588C20D00E93FF0 /* CountDownViewController.xib in Resources */,
 				DCC0BD0615F98CAB004ACB50 /* GraphViewController.xib in Resources */,
+				DCC0BD1915FAE96D004ACB50 /* CommutesEmpty.png in Resources */,
+				DCC0BD1A15FAE96D004ACB50 /* CommutesEmpty@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,11 +1103,6 @@
 				56D8B1C415F93C2F0073FEF9 /* GraphListViewController.m in Sources */,
 				DCC0BCE015F98081004ACB50 /* BarGraphViewController.m in Sources */,
 				DCC0BCE115F98081004ACB50 /* CommuteTimeScatterPlotViewController.m in Sources */,
-				DCC0BCF315F982AB004ACB50 /* ECGraph.m in Sources */,
-				DCC0BCF515F982AB004ACB50 /* ECGraphItem.m in Sources */,
-				DCC0BCF715F982AB004ACB50 /* ECGraphLine.m in Sources */,
-				DCC0BCF915F982AB004ACB50 /* ECGraphPoint.m in Sources */,
-				DCC0BCFD15F982B6004ACB50 /* ECCommon.m in Sources */,
 				DCC0BD0115F98323004ACB50 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1147,11 +1112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D7E86B150A318200515D7D /* DailyCommuteTests.m in Sources */,
-				DCC0BCF415F982AB004ACB50 /* ECGraph.m in Sources */,
-				DCC0BCF615F982AB004ACB50 /* ECGraphItem.m in Sources */,
-				DCC0BCF815F982AB004ACB50 /* ECGraphLine.m in Sources */,
-				DCC0BCFA15F982AB004ACB50 /* ECGraphPoint.m in Sources */,
-				DCC0BCFE15F982B6004ACB50 /* ECCommon.m in Sources */,
 				DCC0BD0215F98323004ACB50 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1252,8 +1212,8 @@
 		56D7E86F150A318200515D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
@@ -1267,8 +1227,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1277,8 +1237,8 @@
 		56D7E870150A318200515D7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
@@ -1292,8 +1252,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1366,8 +1326,8 @@
 		685C0DEA150E3008007E078B /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bobby Wilson (EPDYS8T364)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyCommute/DailyCommute-Prefix.pch";
 				INFOPLIST_FILE = "DailyCommute/DailyCommute-Info.plist";
@@ -1381,8 +1341,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93BB9875-05AF-4F15-BFE1-09D57F59FEC7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

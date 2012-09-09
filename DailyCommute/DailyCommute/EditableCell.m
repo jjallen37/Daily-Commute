@@ -24,6 +24,7 @@
 -(void)setInputViewStyle:(InputViewStyle)viewStyle{
     if(viewStyle == InputViewStyleTimePicker){
         textField.inputView = timePicker;
+        textField.enabled = NO;
     }else{
         textField.inputView = nil;
     }

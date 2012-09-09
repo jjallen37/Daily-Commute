@@ -41,8 +41,8 @@
     UIBarButtonItem *_backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     self.navigationItem.backBarButtonItem = _backButton;
     
-    //Stats view
-    /*statsViewController = [[StatsViewController alloc] initWithNibName:@"StatsViewController" bundle:nil];
+    /*Stats view
+    statsViewController = [[StatsViewController alloc] initWithNibName:@"StatsViewController" bundle:nil];
     [statsViewController setDelegate:self];
     statsView = statsViewController.view;
     [self.view addSubview:statsView];  
@@ -55,11 +55,12 @@
     [informationTableViewController setParentViewController:self];
     informationTableView.delegate = informationTableViewController;
     informationTableView.dataSource = informationTableViewController;
-        
-    ////Adjust Fonts
+    
+    //Adjust Fonts
     [timeHoursMinutesLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:60]];
     [timeTodaysDateLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:17]];
     [weatherLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:17]];
+    [sorryLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:14]];
     
     titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
 	titleLabel.backgroundColor = [UIColor clearColor];
@@ -82,6 +83,8 @@
 {
     weatherLabel = nil;
     backgroundImage = nil;
+    sorryView = nil;
+    sorryLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -96,14 +99,23 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)showNewCommuteController {
+    NewCommuteModalNavigationController *ncVC = [[NewCommuteModalNavigationController alloc] init];
+    [self presentModalViewController:ncVC animated:YES];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
-    if(self.currentCommute == nil){
-        self.title = @"";
-        titleLabel.text = self.title;	
+    if (self.currentCommute == nil){
+        self.title = @"Commute";
+        titleLabel.text = self.title;
+        sorryView.hidden = NO;
+        sorryLabel.hidden = NO;
 //        [self showSettingsScreen:nil];
     }else {
         self.title = self.currentCommute.name;
-        titleLabel.text = self.title;	
+        titleLabel.text = self.title;
+        sorryView.hidden = YES;
+        sorryLabel.hidden = YES;
     }
     
     [informationTableViewController updateInfo:self.currentCommute];
@@ -143,6 +155,9 @@
     //If the commute doesnt exist, make it
     if([objects count] == 0){
         return nil;
+        sorryView.hidden = NO;
+        sorryLabel.hidden = NO;
+        self.title = @"Sorry.";
     }else{
         return [objects objectAtIndex:0];
     }
@@ -202,7 +217,7 @@
 
 - (IBAction)startRoute:(UIButton *)sender {
     isCommuting = YES;
-    if(sender.tag==0)//To Commute
+    if(sender.tag == 0)//To Commute
         isToCommute = TRUE;
     else//From commute
         isToCommute = FALSE;

@@ -25,8 +25,6 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.title = @"Commutes";
-        
     }
     return self;
 }
@@ -37,8 +35,6 @@
     
     //Set up core data delegate
     self.fetchedResultsController.delegate = self;
-
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

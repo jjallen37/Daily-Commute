@@ -40,7 +40,7 @@
     
     //Tab 3 - CommuteListVC
     CommuteListViewController *commuteListVC = [[CommuteListViewController alloc] initWithStyle:UITableViewStylePlain];
-    commuteListVC.title = @"Commute History";
+    commuteListVC.title = @"History";
     UINavigationController *tab3 = [[UINavigationController alloc] initWithRootViewController:commuteListVC];
                                     
     //Tab 4 - Settings VC

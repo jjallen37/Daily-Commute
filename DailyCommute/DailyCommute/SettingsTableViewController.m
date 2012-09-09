@@ -60,10 +60,10 @@
     }
     
     //If the commute doesnt exist, make it
-    if([objects count]==0){
+    if([objects count] == 0) {
         commuteArray = [[NSMutableArray alloc] init];
         [self.navigationItem setHidesBackButton:YES animated:NO];
-    }else{
+     }else {
         commuteArray = [objects mutableCopy];
     }
     

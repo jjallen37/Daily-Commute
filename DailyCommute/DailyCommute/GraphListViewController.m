@@ -8,6 +8,7 @@
 
 #import "GraphListViewController.h"
 #import "CommuteTimeScatterPlotViewController.h"
+#import "BarGraphViewController.h"
 
 @interface GraphListViewController ()
 
@@ -39,6 +40,17 @@
     // e.g. self.myOutlet = nil;
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.fetchedResultsController = [self fetchedResultsController];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return 2;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -46,9 +58,16 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GraphCell"];
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"Commute History Graph";
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"Commute History Graph";
+            break;
+        case 1:
+            cell.textLabel.text = @"Time Bar Graph";
+            break;
+        default:
+            break;
     }
     return cell;
 }
@@ -57,6 +76,12 @@
     switch (indexPath.row) {
         case 0:
             [self viewCommuteGraph];
+            break;
+        case 1:
+            [self viewBarGraph];
+            break;
+        default:
+            break;
     }
 }
 
@@ -65,4 +90,8 @@
     [self presentViewController:ctGraph animated:YES completion:nil];
 }
 
+-(void) viewBarGraph {
+    BarGraphViewController *bgGraph = [[BarGraphViewController alloc] init];
+    [self presentViewController:bgGraph animated:YES completion:nil];
+}
 @end

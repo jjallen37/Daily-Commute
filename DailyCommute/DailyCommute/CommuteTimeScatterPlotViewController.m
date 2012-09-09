@@ -77,10 +77,10 @@
     [yRange expandRangeByFactor:CPTDecimalFromCGFloat(1.2f)];
     plotSpace.yRange = yRange;
     // 4 - Create styles and symbols
-    CPTMutableLineStyle *aaplLineStyle = [commutes.dataLineStyle mutableCopy];
-    aaplLineStyle.lineWidth = 2.5;
-    aaplLineStyle.lineColor = commuteColor;
-    commutes.dataLineStyle = aaplLineStyle;
+    CPTMutableLineStyle *plotLineStyle = [commutes.dataLineStyle mutableCopy];
+    plotLineStyle.lineWidth = 2.5;
+    plotLineStyle.lineColor = commuteColor;
+    commutes.dataLineStyle = plotLineStyle;
     CPTMutableLineStyle *commuteLineStyle = [CPTMutableLineStyle lineStyle];
     commuteLineStyle.lineColor = commuteColor;
     CPTPlotSymbol *commuteSymbol = [CPTPlotSymbol ellipsePlotSymbol];
@@ -210,7 +210,7 @@
 }
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
-    NSInteger valueCount = 1;
+    NSInteger valueCount = [self.timeIntervalArray count];
     switch (fieldEnum) {
         case CPTScatterPlotFieldX:
             if (index < valueCount) {

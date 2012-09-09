@@ -94,7 +94,7 @@
      return 2;
      }*/
     
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -147,19 +147,19 @@
                 cell.textField.text = [dateFormatter stringFromDate:currentCommute.toArrivalTime];
             }
             break;
-        case 2://Departure time
-            cell.titleLabel.text = @"Return By";
-            [cell setInputViewStyle:InputViewStyleTimePicker];
-            cell.textField.tag = 2;
-            if (currentCommute.fromArrivalTime != nil) {
-                [cell.timePicker setDate:currentCommute.fromArrivalTime];
-            }
-            if(currentCommute.fromArrivalTime == nil){
-                cell.textField.placeholder = @"Time to be back";
-            }else{
-                cell.textField.text = [dateFormatter stringFromDate:currentCommute.fromArrivalTime];
-            }
-            break;
+//        case 2://Departure time
+//            cell.titleLabel.text = @"Return By";
+//            [cell setInputViewStyle:InputViewStyleTimePicker];
+//            cell.textField.tag = 2;
+//            if (currentCommute.fromArrivalTime != nil) {
+//                [cell.timePicker setDate:currentCommute.fromArrivalTime];
+//            }
+//            if(currentCommute.fromArrivalTime == nil){
+//                cell.textField.placeholder = @"Time to be back";
+//            }else{
+//                cell.textField.text = [dateFormatter stringFromDate:currentCommute.fromArrivalTime];
+//            }
+//            break;
         default:
             break;
     }
@@ -168,7 +168,6 @@
     [cell setIndentationWidth:0];
     
     [cell setEditingAccessoryType:UITableViewCellAccessoryNone];
-    
     return cell;
     
 }
