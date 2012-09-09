@@ -227,4 +227,9 @@
         //[UIView commitAnimations];
     }
 }
+
+-(IBAction)onNotify:(id)sender{
+    
+}
+
 @end

@@ -32,6 +32,7 @@
         self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     }
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
+    
     [self.view addSubview:self.hostView];
 }
 

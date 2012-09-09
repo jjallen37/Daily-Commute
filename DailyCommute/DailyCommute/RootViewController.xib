@@ -585,7 +585,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">205</int>
+			<int key="maxID">206</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -614,8 +614,6 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="backgroundImage">UIImageView</string>
 						<string key="clockView">UIView</string>
-						<string key="commuteLabel">UILabel</string>
-						<string key="fromCommuteButton">UIButton</string>
 						<string key="informationTableView">UITableView</string>
 						<string key="sorryLabel">UILabel</string>
 						<string key="sorryView">UIImageView</string>
@@ -632,14 +630,6 @@
 						<object class="IBToOneOutletInfo" key="clockView">
 							<string key="name">clockView</string>
 							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="commuteLabel">
-							<string key="name">commuteLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="fromCommuteButton">
-							<string key="name">fromCommuteButton</string>
-							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="informationTableView">
 							<string key="name">informationTableView</string>

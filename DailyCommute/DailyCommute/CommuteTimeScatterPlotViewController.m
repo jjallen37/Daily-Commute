@@ -17,9 +17,13 @@
 
 #pragma mark - UIViewController lifecycle methods
 -(void)viewDidAppear:(BOOL)animated {
+    [self fetchResults];
     [super viewDidAppear:animated];
+<<<<<<< HEAD
     [self initPlot];
     [self fetchResults];
+=======
+>>>>>>> Moar!
 }
 
 #pragma mark - Chart behavior
@@ -32,7 +36,7 @@
 
 -(void)configureHost {
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
-    self.hostView.allowPinchScaling = YES;
+    self.hostView.allowPinchScaling = NO;
     [self.view addSubview:self.hostView];
 }
 
@@ -67,7 +71,7 @@
     // 2 - Create the three plots
     CPTScatterPlot *commutes = [[CPTScatterPlot alloc] init];
     commutes.dataSource = self;
-    CPTColor *commuteColor = [CPTColor colorWithComponentRed:0.788f green:0.2f blue:0.0f alpha:1.0f];
+    CPTColor *commuteColor = [CPTColor colorWithComponentRed:0.2f green:0.788f blue:0.0f alpha:1.0f];
     [graph addPlot:commutes toPlotSpace:plotSpace];
     // 3 - Set up plot space
     [plotSpace scaleToFitPlots:@[commutes]];
@@ -190,11 +194,18 @@
 
 - (void)viewDidLoad
 {
+    [self initPlot];
+    self.timeIntervalArray = [[NSMutableArray alloc] init];
+    self.dateStringArray = [[NSMutableArray alloc] init];
+    self.routeArray = [[NSMutableArray alloc] init];
     [super viewDidLoad];
+<<<<<<< HEAD
 	// Do any additional setup after loading the view.
     self.timeIntervalArray = [[NSMutableArray alloc] init];
     self.dateStringArray = [[NSMutableArray alloc] init];
     self.routeArray = [[NSMutableArray alloc] init];
+=======
+>>>>>>> Moar!
 }
 
 - (void)didReceiveMemoryWarning
@@ -250,6 +261,7 @@
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
+<<<<<<< HEAD
     
     NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     for (Route *route in array) {
@@ -262,14 +274,33 @@
             NSString* dateString = [df stringFromDate:route.endTime];
             [self.dateStringArray addObject:dateString];
         }
+=======
+    //NSLog(@"%@", fetchRequest);
+    NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    for (Route *route in array) {
+        NSLog(@"%@", route.toCommute);
+        NSLog(@"%@", route);
+        [self.routeArray addObject:route];
+        NSNumber *time = [NSNumber numberWithInteger:[route.endTime timeIntervalSinceDate:route.startTime]];
+        [self.timeIntervalArray addObject:time];
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        df.dateFormat = @"MM/dd/yyyy";
+        NSString* dateString = [df stringFromDate:route.endTime];
+        [self.dateStringArray addObject:dateString];
+>>>>>>> Moar!
     }
     
     NSLog(@"Time Intervals: %@", self.timeIntervalArray);
     NSLog(@"Routes: %@", self.routeArray);
     NSLog(@"Date Strings: %@", self.dateStringArray);
+<<<<<<< HEAD
     error = nil;
+=======
+    
+>>>>>>> Moar!
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
+    
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
