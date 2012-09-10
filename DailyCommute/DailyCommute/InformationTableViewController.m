@@ -66,27 +66,85 @@
     [self.tableView reloadData];
 }
 
+
+
 - (NSTimeInterval )getAverageTime {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSArray *routesTemp = [[commute toRoute] allObjects];
     
     NSTimeInterval average = 0;
-
+    
     NSInteger current;
-    for (Route *route in routesTemp) {
-        current = (NSInteger)[route.endTime timeIntervalSinceDate:route.startTime];
+    
+    NSDate *currentDate = [NSDate date];
+    NSDateComponents *currentComponents = [[NSCalendar currentCalendar] components:(NSWeekdayCalendarUnit | NSDayCalendarUnit) fromDate:currentDate];
+    
+    if ([userDefaults objectForKey:kDataFilterKey]==kDataFilterTypeWeek) {//Based on week day data
+        
+        NSUInteger count = 0;
+        
+        for (Route *route in routesTemp) {
+            NSDate *startTime = route.startTime;
+            NSDateComponents *comps = [[NSCalendar currentCalendar] components:(NSWeekdayCalendarUnit) fromDate:startTime];
+            if (comps.weekday == currentComponents.weekday) {
+                current = (NSInteger)[route.endTime timeIntervalSinceDate:route.startTime];
+                average += current;
+                count++;
+            }
 
-        average += current;
+        }
+        
+        if ([routesTemp count] != 0) {
+            average = average/count;
+        } else {
+            average = 0;
+        }
+        
+        return average;
+    }else if([userDefaults objectForKey:kDataFilterKey]==kDataFilterTypeMonth){//Based on past month data
+        
+        NSUInteger count = 0;
+        
+        for (Route *route in routesTemp) {
+            NSDate *startTime = route.startTime;
+            NSDateComponents *comps = [[NSCalendar currentCalendar] components:(NSDayCalendarUnit) fromDate:startTime];
+            if (comps.day == currentComponents.day) {
+                current = (NSInteger)[route.endTime timeIntervalSinceDate:route.startTime];
+                average += current;
+                count++;
+            }
+            
+        }
+        
+        if ([routesTemp count] != 0) {
+            average = average/count;
+        } else {
+            average = 0;
+        }
+        
+        return average;
+        
+    }else{//All Commutes
+
+        for (Route *route in routesTemp) {
+            current = (NSInteger)[route.endTime timeIntervalSinceDate:route.startTime];
+            
+            average += current;
+        }
+        
+        if ([routesTemp count] != 0) {
+            average = average/[routesTemp count];
+        } else {
+            average = 0;
+        }
+        
+        return average;
     }
-    
-    if ([routesTemp count] != 0) {
-        average = average/[routesTemp count];
-    } else {
-        average = 0;
-    }
-    
-    return average;
 }
+
+
+
 
 - (NSTimeInterval )getTimeTilDepart {
     NSDate *arriveTime = commute.toArrivalTime;

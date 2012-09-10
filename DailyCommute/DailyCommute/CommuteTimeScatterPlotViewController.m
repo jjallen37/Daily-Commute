@@ -19,11 +19,11 @@
 -(void)viewDidAppear:(BOOL)animated {
     [self fetchResults];
     [super viewDidAppear:animated];
-<<<<<<< HEAD
+    //<<<<<<< HEAD
     [self initPlot];
     [self fetchResults];
-=======
->>>>>>> Moar!
+    //=======
+    //>>>>>>> Moar!
 }
 
 #pragma mark - Chart behavior
@@ -199,13 +199,11 @@
     self.dateStringArray = [[NSMutableArray alloc] init];
     self.routeArray = [[NSMutableArray alloc] init];
     [super viewDidLoad];
-<<<<<<< HEAD
 	// Do any additional setup after loading the view.
     self.timeIntervalArray = [[NSMutableArray alloc] init];
     self.dateStringArray = [[NSMutableArray alloc] init];
     self.routeArray = [[NSMutableArray alloc] init];
-=======
->>>>>>> Moar!
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -261,7 +259,7 @@
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startTime" ascending:YES];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
-<<<<<<< HEAD
+    //<<<<<<< HEAD
     
     NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     for (Route *route in array) {
@@ -274,43 +272,44 @@
             NSString* dateString = [df stringFromDate:route.endTime];
             [self.dateStringArray addObject:dateString];
         }
-=======
-    //NSLog(@"%@", fetchRequest);
-    NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    for (Route *route in array) {
-        NSLog(@"%@", route.toCommute);
-        NSLog(@"%@", route);
-        [self.routeArray addObject:route];
-        NSNumber *time = [NSNumber numberWithInteger:[route.endTime timeIntervalSinceDate:route.startTime]];
-        [self.timeIntervalArray addObject:time];
-        NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        df.dateFormat = @"MM/dd/yyyy";
-        NSString* dateString = [df stringFromDate:route.endTime];
-        [self.dateStringArray addObject:dateString];
->>>>>>> Moar!
+        //=======
+        //NSLog(@"%@", fetchRequest);
+        NSArray *array = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        for (Route *route in array) {
+            NSLog(@"%@", route.toCommute);
+            NSLog(@"%@", route);
+            [self.routeArray addObject:route];
+            NSNumber *time = [NSNumber numberWithInteger:[route.endTime timeIntervalSinceDate:route.startTime]];
+            [self.timeIntervalArray addObject:time];
+            NSDateFormatter *df = [[NSDateFormatter alloc] init];
+            df.dateFormat = @"MM/dd/yyyy";
+            NSString* dateString = [df stringFromDate:route.endTime];
+            [self.dateStringArray addObject:dateString];
+            //>>>>>>> Moar!
+        }
+        
+        NSLog(@"Time Intervals: %@", self.timeIntervalArray);
+        NSLog(@"Routes: %@", self.routeArray);
+        NSLog(@"Date Strings: %@", self.dateStringArray);
+        //<<<<<<< HEAD
+        error = nil;
+        //=======
+        
+        //>>>>>>> Moar!
+        // Edit the section name key path and cache name if appropriate.
+        // nil for section name key path means "no sections".
+        
+        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        aFetchedResultsController.delegate = self;
+        self.fetchedResultsController = aFetchedResultsController;
+        
+        if (![self.fetchedResultsController performFetch:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
     }
-    
-    NSLog(@"Time Intervals: %@", self.timeIntervalArray);
-    NSLog(@"Routes: %@", self.routeArray);
-    NSLog(@"Date Strings: %@", self.dateStringArray);
-<<<<<<< HEAD
-    error = nil;
-=======
-    
->>>>>>> Moar!
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SettingsTableViewController.h"
+#import "Commute.h"
 
 @implementation SettingsTableViewController
 
@@ -155,7 +156,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -163,22 +164,31 @@
     if(section==0){
         // Return the number of rows in the section.
         return [commuteArray count];
-    }else  if (section == 1) {
+    }else  if (section == 1) {//Depature time filter
+        return 3;
+    }else if(section == 2){
         return 2;
-    }
-    else {
+    }else{
         return 1;
     }
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if (section==0) {
-        return [NSString stringWithFormat:@"Destinations"];
-    }else if (section == 1) {
-        return [NSString stringWithFormat:@"About"];
-    }
-    else {
-        return @"";
+    switch (section) {
+        case 0:
+            return [NSString stringWithFormat:@"Destinations"];
+            break;
+        case 1:
+            return [NSString stringWithFormat:@"Predict Depature Time With"];
+            break;
+        
+        case 2:
+            return [NSString stringWithFormat:@"About"];
+            break;
+            
+        default:
+            return @"";
+            break;
     }
 }
 
@@ -238,12 +248,45 @@
         
         switch(indexPath.section){
             case 1:
+                switch (indexPath.row) {
+                    case 0:
+                        cell.textLabel.text = @"All Commutes";
+                        if ([userDefaults objectForKey:kDataFilterKey] == kDataFilterTypeAll) {
+                            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                        }else{
+                            cell.accessoryType = UITableViewCellAccessoryNone;
+                        }
+                        break;
+                    case 1:
+                        if ([userDefaults objectForKey:kDataFilterKey] == kDataFilterTypeWeek) {
+                            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                        }else{
+                            cell.accessoryType = UITableViewCellAccessoryNone;
+                        }
+                        cell.textLabel.text = @"Day Each Week";
+                        break;
+                    case 2:
+                        if ([userDefaults objectForKey:kDataFilterKey] == kDataFilterTypeMonth) {
+                            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                        }else{
+                            cell.accessoryType = UITableViewCellAccessoryNone;
+                        }
+                        cell.textLabel.text = @"Day Each Month";
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+                break;
+                
+            case 2:
                 if (indexPath.row == 0)
                     cell.textLabel.text = @"Tutorial";
                 else
                     cell.textLabel.text = @"Tips";
                 break;
-            case 2:
+            case 3:
                 cell.textLabel.text = @"Restore Pro Version";
                 cell.accessoryType = UITableViewCellAccessoryNone;
                 break;
@@ -263,17 +306,47 @@
     TipsViewController *tipsVC;
     switch (indexPath.section) {
         case 0:
-            defaults = [NSUserDefaults standardUserDefaults];
+            if ([tableView isEditing]) {
+                CommuteSettingsTableViewController *commuteSettingsTVC = [[CommuteSettingsTableViewController alloc] initWithCommute:[commuteArray objectAtIndex:indexPath.row]];
+                commuteSettingsTVC.managedObjectContext = self.managedObjectContext;
+                [self.navigationController pushViewController:commuteSettingsTVC animated:YES];
+            }else{
+                defaults = [NSUserDefaults standardUserDefaults];
+                
+                tempCommute = [commuteArray objectAtIndex:indexPath.row];
+                
+                [defaults setObject:tempCommute.name forKey:kCurrentCommuteKey];
+                [[self.tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+                [defaults synchronize];
+                
+                [self.tableView reloadData];
+            }
+            break;
+        case 1://Setting filter type
             
-            tempCommute = [commuteArray objectAtIndex:indexPath.row];
+            switch (indexPath.row) {
+                case 0:
+                    [userDefaults setObject:kDataFilterTypeAll
+                                     forKey:kDataFilterKey];
+                    break;
+                case 1:
+                    [userDefaults setObject:kDataFilterTypeWeek
+                                     forKey:kDataFilterKey];
+                    break;
+                    
+                case 2:
+                    [userDefaults setObject:kDataFilterTypeMonth
+                                     forKey:kDataFilterKey];
+                    break;
+                    
+                default:
+                    break;
+            }
             
-            [defaults setObject:tempCommute.name forKey:kCurrentCommuteKey];
-            [[self.tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
-            [defaults synchronize];
-            
+            [userDefaults synchronize];
             [self.tableView reloadData];
             break;
-        case 1:
+        case 2:
             switch (indexPath.row) {
                 case 0://Tutorial
 //                        [(AppDelegate *)[[UIApplication sharedApplication] delegate] showTutorial];
@@ -287,7 +360,7 @@
                     break;
             }
             break;
-        case 2://Restore in app purchases
+        case 3://Restore in app purchases
             [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
             break;
         default:
@@ -387,6 +460,7 @@
         if (self.currentCommute == nil && commuteArray.count!=0) {
             [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         }
+        
 	}
 }
 

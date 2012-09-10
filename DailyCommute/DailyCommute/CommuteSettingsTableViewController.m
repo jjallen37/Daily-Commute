@@ -18,7 +18,7 @@
     //Initilize Objects
     currentCommute = commute;
     
-    return [self init];
+    return [self initWithStyle:UITableViewStyleGrouped];
     
 }
 

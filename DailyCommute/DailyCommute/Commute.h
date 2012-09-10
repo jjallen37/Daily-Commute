@@ -18,6 +18,13 @@
 //To be used with NSUSerDefaults to select the active commute.
 #define kCurrentCommuteKey @"CurrentComute"
 
+//To be used to determine average time
+#define kDataFilterKey @"DataFilterType"
+#define kDataFilterTypeAll @"All"
+#define kDataFilterTypeWeek @"Weekly"
+#define kDataFilterTypeMonth @"Month"
+
+
 
 @interface Commute : NSManagedObject
 
