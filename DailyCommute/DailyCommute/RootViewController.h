@@ -51,6 +51,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *informationTableView;
 @property (nonatomic, strong) UIView *statsView;
+@property (strong, nonatomic) IBOutlet UIButton *goProButton;
 
 
 //Updates information on screen

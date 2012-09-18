@@ -2,22 +2,19 @@
 <Bucket
    type = "1"
    version = "1.0">
-<<<<<<< HEAD
-=======
    <FileBreakpoints>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DailyCommute/CommuteTimeScatterPlotViewController.m"
-         timestampString = "368925756.248839"
+         timestampString = "369506769.862786"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "242"
-         endingLineNumber = "242"
-         landmarkName = "-fetchResults"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
+         landmarkName = "-configureAxes"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
->>>>>>> Moar!
 </Bucket>

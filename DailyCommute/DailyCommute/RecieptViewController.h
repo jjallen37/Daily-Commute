@@ -11,6 +11,7 @@
 
 @interface RecieptViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate, UIScrollViewDelegate,UIAlertViewDelegate>{
     BOOL isEditing;
+    UILabel *titleLabel;//Created to show custom fonts
     NSDate *mpStartTime;
     NSDate *mpEndTime;
     NSArray *delayBarTimeArray;//Holds the delay time intervals from the route data.

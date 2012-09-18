@@ -143,7 +143,7 @@
 }
 
 -(IBAction)closeView:(id)sender {
-    NSLog(@"CloseView");
+//    NSLog(@"CloseView");
     [viewWithNavigationViewController.navigationController dismissModalViewControllerAnimated:YES];
 }
 

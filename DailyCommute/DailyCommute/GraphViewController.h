@@ -15,8 +15,13 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSMutableArray *routeArray;
-@property (strong, nonatomic) NSMutableArray *timeIntervalArray;
-@property (strong, nonatomic) NSMutableArray *dateStringArray;
-
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) NSString *currentCommuteName;
+-(NSString*) timeFormatted:(int)totalSeconds;
+-(NSNumber*) timeIntervalOfRoute:(Route*)route;
+-(NSString*) stringForRoute:(Route*)route;
+-(NSNumber*) delayOfRoute:(Route*)route;
+-(NSNumber*) longestCommute;
+-(NSNumber*) shortestCommute;
+-(NSNumber*) longestDelay;
 @end

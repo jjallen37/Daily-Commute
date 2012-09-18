@@ -8,6 +8,7 @@
 
 #import "NewCommuteModalNavigationController.h"
 #import "AppDelegate.h"
+#import "Commute.h"
 
 @implementation NewCommuteModalNavigationController
 
@@ -35,7 +36,7 @@
 	titleLabel.backgroundColor = [UIColor clearColor];
 	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:22];
 	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    titleLabel.shadowOffset = CGSizeMake(2,2);
+    titleLabel.shadowOffset = CGSizeMake(0,2);
 	titleLabel.textAlignment = UITextAlignmentCenter;
 	titleLabel.textColor =[UIColor whiteColor];
 	titleLabel.text = @"New Commute";	
@@ -48,9 +49,11 @@
 -(IBAction)acceptCommute:(id)sender{
     [settingsTVC saveCommute];
     if(commute.name.length == 0){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Commute Name" message:@"Name your commute" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Commute Name" message:@"You must provide a destination." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
         [alert show];
     }else{
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:commute.name forKey:kCurrentCommuteKey];
         [delegate acceptCommute];
     }
 }

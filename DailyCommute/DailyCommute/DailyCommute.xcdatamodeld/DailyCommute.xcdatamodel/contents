@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12B19" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12A269" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Commute" representedClassName="Commute" syncable="YES">
         <attribute name="fromArrivalTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="toArrivalTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="travelMethod" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fromRoute" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Route" inverseName="fromCommute" inverseEntity="Route" syncable="YES"/>
-        <relationship name="toRoute" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Route" inverseName="toCommute" inverseEntity="Route" syncable="YES"/>
+        <relationship name="toRoute" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="toCommute" inverseEntity="Route" syncable="YES"/>
     </entity>
     <entity name="MovingPoint" representedClassName="MovingPoint" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -21,7 +21,7 @@
         <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="fromCommute" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Commute" inverseName="fromRoute" inverseEntity="Commute" syncable="YES"/>
         <relationship name="movingPoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MovingPoint" inverseName="route" inverseEntity="MovingPoint" syncable="YES"/>
-        <relationship name="toCommute" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Commute" inverseName="toRoute" inverseEntity="Commute" syncable="YES"/>
+        <relationship name="toCommute" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Commute" inverseName="toRoute" inverseEntity="Commute" syncable="YES"/>
     </entity>
     <elements>
         <element name="Commute" positionX="160" positionY="192" width="128" height="135"/>

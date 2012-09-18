@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GraphViewController.h"
 
-@interface BarGraphViewController : GraphViewController <CPTBarPlotDataSource, CPTBarPlotDelegate>
+@interface BarGraphViewController : GraphViewController <CPTBarPlotDataSource, CPTBarPlotDelegate, CPTPlotSpaceDelegate>
 @property (nonatomic, strong) CPTBarPlot *timePlot;
+@property (nonatomic, strong) CPTBarPlot *delayPlot;
 @end

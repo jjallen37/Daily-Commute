@@ -13,7 +13,6 @@
 @implementation RecieptViewController
 
 @synthesize route;
-
 @synthesize scroller;
 @synthesize startTimeField;
 @synthesize endTimeField;
@@ -30,7 +29,6 @@
 
 -(id)initWithRoute:(Route *)newRoute{
     route = newRoute;
-    
     return [self init];
 }
 
@@ -41,10 +39,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = self.route.toCommute.name;
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+	titleLabel.backgroundColor = [UIColor clearColor];
+	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:24];
+	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    titleLabel.shadowOffset = CGSizeMake(0,2);
+	titleLabel.textAlignment = UITextAlignmentCenter;
+	titleLabel.textColor =[UIColor whiteColor];
+	titleLabel.text = self.title;
+	self.navigationItem.titleView = titleLabel;
+    
     isEditing = TRUE;
     [self changeEditing:nil];
     
-    self.title = self.route.toCommute.name;
     
     //Change Keyboard views
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -150,8 +158,8 @@
     
     //Save the context
     NSManagedObjectContext *context;
-    if (context == nil) 
-    {context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];}
+    if (context == nil) {context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];}
+    
     NSError *error;
     [context save:&error];
 }

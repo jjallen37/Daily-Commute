@@ -13,6 +13,7 @@
 #import "InAppPurchaseManager.h"
 
 @implementation RootViewController
+@synthesize goProButton;
 
 @synthesize managedObjectContext;
 @synthesize currentRoute;
@@ -49,6 +50,7 @@
     [statsView setFrame:CGRectMake(0, 310, statsView.frame.size.width, statsView.frame.size.height)];
     */
     
+
     //Information Table
     informationTableViewController = [[InformationTableViewController alloc] initWithCommute:self.currentCommute];
     [informationTableViewController setTableView:informationTableView];
@@ -62,11 +64,11 @@
     [weatherLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:17]];
     [sorryLabel setFont:[UIFont fontWithName:@"Signika-Bold" size:14]];
     
-    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 160, 44)];
 	titleLabel.backgroundColor = [UIColor clearColor];
 	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:24];
 	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    titleLabel.shadowOffset = CGSizeMake(2,2);
+    titleLabel.shadowOffset = CGSizeMake(0,2);
 	titleLabel.textAlignment = UITextAlignmentCenter;
 	titleLabel.textColor =[UIColor whiteColor];
 	titleLabel.text = self.title;
@@ -77,6 +79,27 @@
     //Show main View
     [self showMainScreen:nil];
     [self.view setNeedsDisplay];
+    
+    
+    //Put in go pro button if it can be put in
+    if(![[NSUserDefaults standardUserDefaults] objectForKey:@"isProUpgradePurchased"]) {
+        UIBarButtonItem *goPro = [[UIBarButtonItem alloc] initWithCustomView:goProButton];
+        [self.navigationItem setRightBarButtonItem:goPro];
+    }
+    
+    
+    
+    
+    ///Testing Data
+    NSDate *date = [[NSDate date] dateByAddingTimeInterval:-60*60*24*365];
+    for (int i=0; i<100; i++) {
+        Route *route = [NSEntityDescription insertNewObjectForEntityForName:@"Route" inManagedObjectContext:self.managedObjectContext];
+        route.startTime = date;
+        route.endTime = [date dateByAddingTimeInterval:arc4random() % 360];
+        date = [date dateByAddingTimeInterval:60*60*24];
+        [self.currentCommute addToRouteObject:route];
+    }
+    
 }
 
 - (void)viewDidUnload
@@ -118,7 +141,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-//    [self.statsViewController hideStatsView];
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    //Check to see if the user needs to select a commute first
+    if (!self.currentCommute) {
+        [sorryLabel setHidden:NO];
+    }else{
+        [sorryLabel setHidden:YES];
+    }
 }
 
 #pragma mark - methods
@@ -212,13 +242,11 @@
 
 - (IBAction)startRoute:(UIButton *)sender {
     isCommuting = YES;
-    if(sender.tag == 0)//To Commute
-        isToCommute = TRUE;
-    else//From commute
-        isToCommute = FALSE;
     
     //Create the route
     currentRoute = [NSEntityDescription insertNewObjectForEntityForName:@"Route" inManagedObjectContext:managedObjectContext];
+    
+    
     
     //Set up a new current Route view.
     currentRouteViewController = [[CurrentRouteViewController alloc] initWithNibName:@"CurrentRouteViewController" bundle:nil];
@@ -265,16 +293,17 @@
     self.navigationItem.rightBarButtonItem = nil;
 }
 
+
 //Finishes a commute and returns to the home screen
 -(void)saveRoute:(id)sender{
     isCommuting = NO;
     //Prevent multiple commutes per day.
-    if(isToCommute == FALSE){
         //[fromCommuteButton setEnabled:NO];
-        [self.currentCommute addFromRouteObject:currentRoute];
-    }else{
-        [self.currentCommute addToRouteObject:currentRoute];
-    }
+    [self.currentCommute addToRouteObject:currentRoute];
+    
+    NSError *error;
+    [self.managedObjectContext save:&error];
+    
     //[toCommuteButton setEnabled:NO];
     [currentRouteReceipt saveRoute];
     //Close keyboards, Save the context
@@ -284,10 +313,18 @@
     [self showMainScreen:sender];
 }
 
+
 //Returns to the main screen
 -(void)showMainScreen:(id)sender{
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
+    
+    //Put in go pro button if it can be put in
+    if(![[NSUserDefaults standardUserDefaults] objectForKey:@"isProUpgradePurchased"]) {
+        UIBarButtonItem *goPro = [[UIBarButtonItem alloc] initWithCustomView:goProButton];
+        [self.navigationItem setRightBarButtonItem:goPro];
+    }
+    
     [UIView beginAnimations:@"mainScreenAnimation" context:nil];
     [UIView setAnimationDuration:.7];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];

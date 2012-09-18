@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MessageUI/MFMessageComposeViewController.h>
 #import "Route.h"
 #import "MovingPoint.h"
 
@@ -19,7 +20,7 @@
 
 @end
 
-@interface CurrentRouteViewController : UIViewController<CLLocationManagerDelegate, UIAlertViewDelegate> {
+@interface CurrentRouteViewController : UIViewController<CLLocationManagerDelegate, UIAlertViewDelegate, MFMessageComposeViewControllerDelegate> {
     IBOutlet UILabel *mainTimeLabel;
     IBOutlet UILabel *milisecondTimeLabel;
     IBOutlet UILabel *delayTimeLabel;
@@ -49,5 +50,6 @@
 -(void)cancelRoute;
 -(void)finishRoute:(id)sender;
 -(void)animateDelayIncrease;
+-(NSTimeInterval)getAverageTime;
 
 @end

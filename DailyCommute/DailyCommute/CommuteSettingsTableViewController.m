@@ -18,7 +18,7 @@
     //Initilize Objects
     currentCommute = commute;
     
-    return [self initWithStyle:UITableViewStyleGrouped];
+    return [self init];
     
 }
 
@@ -40,7 +40,7 @@
 	titleLabel.backgroundColor = [UIColor clearColor];
 	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:22];
 	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    titleLabel.shadowOffset = CGSizeMake(2,2);
+    titleLabel.shadowOffset = CGSizeMake(0,2);
 	titleLabel.textAlignment = UITextAlignmentCenter;
 	titleLabel.textColor =[UIColor whiteColor];
 	titleLabel.text = self.title;	
@@ -81,6 +81,10 @@
     }
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [self saveCommute];
+}
+
 
 #pragma mark - Table view data source
 
@@ -93,7 +97,6 @@
      }else {
      return 2;
      }*/
-    
     return 2;
 }
 
@@ -126,10 +129,10 @@
     cell.textField.delegate = self;
     switch (indexPath.section) {
         case 0://Name
-            cell.titleLabel.text = @"Name";
+            cell.titleLabel.text = @"Destination";
             cell.textField.tag = 0;
             if(currentCommute.name.length==0){
-                cell.textField.placeholder = @"Commute Name";
+                cell.textField.placeholder = @"Commute Destination";
             }else{
                 cell.textField.text = currentCommute.name;
             }
@@ -175,7 +178,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     switch (section) {
         case 0:
-            return [NSString stringWithFormat:@"Commute Title"];
+            return [NSString stringWithFormat:@"Destination"];
             break;
         case 1:
             return [NSString stringWithFormat:@"Arrive By"];

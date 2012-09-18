@@ -27,7 +27,7 @@
 	titleLabel.backgroundColor = [UIColor clearColor];
 	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:22];
 	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    titleLabel.shadowOffset = CGSizeMake(2,2);
+    titleLabel.shadowOffset = CGSizeMake(0,2);
 	titleLabel.textAlignment = UITextAlignmentCenter;
 	titleLabel.textColor =[UIColor whiteColor];
 	titleLabel.text = self.title;	

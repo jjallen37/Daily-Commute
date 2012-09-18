@@ -6,12 +6,16 @@
 //  Copyright (c) 2012 Valley Rocket. All rights reserved.
 //
 
+#include <stdlib.h>
 #import "AppDelegate.h"
 #import "TutorialModalViewController.h"
 #import "RootViewController.h"
-#import "GraphListViewController.h"
+#import "RootViewControllerNewStyle.h"
+#import "StatsViewController.h"
 #import "CommuteListViewController.h"
 #import "SettingsTableViewController.h"
+#import "Commute.h"
+#import "Route.h"
 
 @implementation AppDelegate
 
@@ -23,20 +27,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBar@1x.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NewNavBar.png"] forBarMetrics:UIBarMetricsDefault];
 
     //Tab 1 - Root Commute VC
-    RootViewController *rootCommuteVC = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    RootViewControllerNewStyle *rootCommuteVC = [[RootViewControllerNewStyle alloc] initWithNibName:@"RootViewControllerNewStyle" bundle:nil];
     rootCommuteVC.title = @"Commute";
     UINavigationController *tab1 = [[UINavigationController alloc] initWithRootViewController:rootCommuteVC];
     
     //Tab 2 - GraphListVC
-    GraphListViewController *listVC = [[GraphListViewController alloc] initWithStyle:UITableViewStylePlain];
-    listVC.title = @"Graphs";
-    UINavigationController *tab2 = [[UINavigationController alloc] initWithRootViewController:listVC];
+    StatsViewController *statsVC= [[StatsViewController alloc] initWithStyle:UITableViewStylePlain];
+    statsVC.title = @"Stats";
+    UINavigationController *tab2 = [[UINavigationController alloc] initWithRootViewController:statsVC];
     
     //Tab 3 - CommuteListVC
     CommuteListViewController *commuteListVC = [[CommuteListViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -51,15 +53,19 @@
     //Initilize the Tab Bar
     tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = @[tab1, tab2, tab3, tab4];
-    
+    tab1.tabBarItem.image = [UIImage imageNamed:@"HomeTabBarIcon.png"];
+    tab2.tabBarItem.image = [UIImage imageNamed:@"StatsTabBarIcon.png"];
+    tab3.tabBarItem.image = [UIImage imageNamed:@"HistoryTabBarIcon.png"];
+    tab4.tabBarItem.image = [UIImage imageNamed:@"SettingsTabBarIcon.png"];
     //Connect the core data
     rootCommuteVC.managedObjectContext = self.managedObjectContext;
-    listVC.managedObjectContext = self.managedObjectContext;
+    statsVC.managedObjectContext = self.managedObjectContext;
     commuteListVC.managedObjectContext = self.managedObjectContext;
     self.window.rootViewController = tabBarController;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [Appirater appLaunched:YES];
     return YES;
 
     
@@ -99,7 +105,11 @@
 //        [self showTutorial];
 //    }    
 //    return YES;
+    
+    
 }
+
+
 //
 //- (void)showTutorial{
 //    TutorialModalViewController *tutorialVC = [[TutorialModalViewController alloc] init];
@@ -131,6 +141,7 @@
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

@@ -12,9 +12,8 @@
 #import "CommuteSettingsTableViewController.h"
 #import "TipsViewController.h"
 #import "Commute.h"
-#import "SettingsCell.h"
 
-@interface SettingsTableViewController : UITableViewController<NewCommuteModalDelegate>{
+@interface SettingsTableViewController : UITableViewController<NewCommuteModalDelegate, UIAlertViewDelegate>{
     IBOutlet UIButton *cancelButton;
     IBOutlet UIButton *checkButton;
     BOOL isEditing;

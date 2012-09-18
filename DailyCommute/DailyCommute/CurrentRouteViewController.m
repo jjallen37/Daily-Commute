@@ -43,7 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    if (context == nil) 
+    if (context == nil)
     {context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];}
     
     
@@ -74,13 +74,13 @@
 }
 
 #pragma mark - methods
--(void)startRoute:(Route *)newRoute{    
+-(void)startRoute:(Route *)newRoute{
     route = newRoute;
     routeTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];//Update timer label
     //Record location every 10 seconds
     locationTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateLocation:) userInfo:nil repeats:YES];
     
-    //Account for initial update 
+    //Account for initial update
     consecutiveDelays = -1;
     delayTime = 0;
     [self updateLocation:nil];
@@ -101,9 +101,9 @@
     [self updateLocation:nil];
     [locManager stopUpdatingLocation];
     
-//    [delegate finishRecordingRoute];
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finish Commute?" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Arrive", nil];
-//    [alert show];
+    //    [delegate finishRecordingRoute];
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finish Commute?" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Arrive", nil];
+    //    [alert show];
 }
 
 -(void)updateTime:(id)sender{
@@ -155,7 +155,7 @@
     if( newLocation.horizontalAccuracy > kRequiredAccuracy || fabs(ageInSeconds) > kMaxAge )
         return;
     
-    //garuntee valid speed
+    //guarantee valid speed
     if(newLocation.speed < 0)
         currentSpeed = 0;
     
@@ -228,8 +228,58 @@
     }
 }
 
--(IBAction)onNotify:(id)sender{
+-(IBAction)onNotify:(UIButton* )sender{
     
+    // Determine if current environment is capable of sending texts.
+    if([MFMessageComposeViewController canSendText]){
+        
+        
+        NSString* destination = [[NSUserDefaults standardUserDefaults] valueForKey:kCurrentCommuteKey];
+        
+        // We need to pull the NSDate representing the espected arrival time as a date
+        NSDate* etd = [route.startTime dateByAddingTimeInterval:[self getAverageTime]];
+        // From the date, all we want is the actual time
+        NSDateFormatter* timeFormatter = [[NSDateFormatter alloc] init];
+        timeFormatter.dateFormat = @"HH:mm";
+        NSString* eta = [timeFormatter stringFromDate:etd];
+        
+//        This will be in the form of: "Hey! I'm using Daily Commute to record my trips and keep track of my life! I'm expecting to get to DESTINATION by ETA. See you soon!"
+        NSString* msgBody = [NSString stringWithFormat:@"Hey! I'm using Daily Commute to record my trips and keep track of my life! I'm expecting to get to %@ by %@. See you soon!", destination, eta];
+        
+        MFMessageComposeViewController* msgComposeView = [[MFMessageComposeViewController alloc] init];
+        msgComposeView.body = msgBody;
+        msgComposeView.messageComposeDelegate = self;
+        
+        [self presentModalViewController:msgComposeView animated:YES];
+    }
+}
+
+// Directly copied from InformationTableViewController.m
+- (NSTimeInterval )getAverageTime {
+    
+    NSArray *routesTemp = [route.toCommute.toRoute allObjects];
+    
+    NSTimeInterval average = 0;
+    
+    NSInteger current;
+    for (Route *r in routesTemp) {
+        current = (NSInteger)[r.endTime timeIntervalSinceDate:r.startTime];
+        
+        average += current;
+    }
+    
+    if ([routesTemp count] != 0) {
+        average = average/[routesTemp count];
+    } else {
+        average = 0;
+    }
+    
+    return average;
+}
+
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+    
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

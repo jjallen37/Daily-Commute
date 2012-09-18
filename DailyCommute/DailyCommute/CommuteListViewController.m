@@ -32,7 +32,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+	titleLabel.backgroundColor = [UIColor clearColor];
+	titleLabel.font = [UIFont fontWithName:@"Signika-Bold" size:24];
+	titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    titleLabel.shadowOffset = CGSizeMake(0,2);
+	titleLabel.textAlignment = UITextAlignmentCenter;
+	titleLabel.textColor =[UIColor whiteColor];
+	titleLabel.text = self.title;
+    self.navigationItem.titleView = titleLabel;
     //Set up core data delegate
     self.fetchedResultsController.delegate = self;
     // Uncomment the following line to preserve selection between presentations.
@@ -54,6 +62,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //reload data
+    NSError *error;
+    self.fetchedResultsController = nil;
+    [self.fetchedResultsController performFetch:&error];
+    [self.tableView reloadData];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [[self.fetchedResultsController sections] count];
@@ -73,8 +91,9 @@
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell.textLabel.font = [UIFont fontWithName:@"Signika-Bold" size:17];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Signika-Bold" size:14];
     }
     
     [self configureCell:cell atIndexPath:indexPath];
